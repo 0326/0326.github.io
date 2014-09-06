@@ -52,10 +52,10 @@ var introlist=[
 		"生活 | THIS IS LIFE"
 	];
 var personallist=[// Slideshow Images
-			{image : '/static/_include/img/slider-images/image01.jpg', title : '<div class="slide-content">'+introlist[0]+'</div>', thumb : '', url : ''},
-			{image : '/static/_include/img/slider-images/image02.jpg', title : '<div class="slide-content">'+introlist[1]+'</div>', thumb : '', url : ''},
-			{image : '/static/_include/img/slider-images/image03.jpg', title : '<div class="slide-content">'+introlist[2]+'</div>', thumb : '', url : ''},
-			{image : '/static/_include/img/slider-images/image04.jpg', title : '<div class="slide-content">'+introlist[3]+'</div>', thumb : '', url : ''}     
+			{image : '../images/slider-images/image01.jpg', title : '<div class="slide-content">'+introlist[0]+'</div>', thumb : '', url : ''},
+			{image : '../images/slider-images/image02.jpg', title : '<div class="slide-content">'+introlist[1]+'</div>', thumb : '', url : ''},
+			{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content">'+introlist[2]+'</div>', thumb : '', url : ''},
+			{image : '../images/slider-images/image04.jpg', title : '<div class="slide-content">'+introlist[3]+'</div>', thumb : '', url : ''}     
 	];
 BRUSHED.slider = function(){
 	$.supersized({

@@ -63,7 +63,7 @@ a > img {
 img {
 	max-width: none;	
 }
-
+img[src="http://eiv.baidu.com/hmt/icon/21.gif"]{display: none;}
 strong {
   	font-weight: 500;
 }

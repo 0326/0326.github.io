@@ -1,187 +1,20 @@
+/************************css reset start,form YUI 3.17.2 **************************/
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul,nav{list-style:none;}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%;font-weight:bold;}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+/*reset end*/
 
-body {
-  padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
-}
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-
-a {
-  color:#39c;
-  font-weight:400;
-  text-decoration:none;
-}
-
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.6em;
-  display:block;
-}
-
-.wrapper {
-  width:860px;
-  margin:0 auto;
-}
-
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
-}
-
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
-}
-
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;  
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
-
-img {
-  max-width:100%;
-}
-
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
-
-header ul {
-  list-style:none;
-  height:40px;
-  
-  padding:0;
-  
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
-
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
-
-small {
-  font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
-
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-}
-
+/**************************************media query********************************/
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
@@ -252,3 +85,124 @@ footer {
     color:#444;
   }
 }
+/*media query end*/
+
+/***************************global style********************/
+body {
+  font-size: 15px;
+  font-family:"方正细黑","微软雅黑","黑体", Arial, sans-serif;
+  color:#777;
+  font-weight:300;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin:0 0 20px;
+  line-height:1.1;
+}
+h1 {
+  font-size:28px;
+}
+h2 {
+  color:#393939;
+}
+h3, h4, h5, h6 {
+  color:#494949;
+}
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+a:hover{text-decoration:underline;}
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  color:#333;
+  font-size:13px;
+}
+pre {
+  padding:8px 15px;
+  background: #f8f8f8;  
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+}
+strong {
+  color:#222;
+  font-weight:700;
+}
+small {
+  font-size:12px;
+}
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+.wrapper {
+  width:100%;
+  min-width: 960px;
+
+}
+aside.fixed-left {
+  width:300px;height: 100%;
+  position:fixed;top:0;left: 0;
+  padding:30px 20px 10px 20px;
+  background-color: #171614;background-image: url();
+}
+article.container{
+  min-width: 620px;
+  margin-left: 340px;padding: 0px 20px 0px 0px;
+
+}
+/*global style end*/
+
+/********************left fixed nav style***********************************/
+.fixed-left .hdimg img{
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  /*border-radius: 50%;*/
+}
+.fixed-left nav a{
+  font-size: 20px;line-height: 25px;
+}
+/*left fixed nav end*/
+
+/***************************links page style*****************************/
+article.container nav{
+  width: 25px;height: 100%;
+  background-color: #373634;
+  position: fixed;left: 340px;top: 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 0 5px;
+}
+article.container nav li{
+  height: 20%;
+}
+#link-info,#link-blog,#link-tool,#link-learn,#link-other{
+  margin-left: 50px;
+}
+#links section h2{
+  line-height: 25px;
+  border-bottom: 1px dashed #777;
+}
+#links section ul li{
+  width: 130px;height: 30px;
+  margin: 5px;
+  display: inline-block;
+  white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
+}
+#links section ul li:hover{
+  background-color: #eee;
+}
+#links section ul a{
+  line-height: 30px;
+}
+#links section ul a em{
+  margin-left: 5px;
+}
+#links section{height: 300px;}

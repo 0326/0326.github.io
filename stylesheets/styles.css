@@ -169,6 +169,9 @@ article.container{
 .fixed-left nav a{
   font-size: 20px;line-height: 25px;
 }
+.fixed-left footer{
+  position:absolute;bottom:50px;
+}
 /*left fixed nav end*/
 
 /***************************links page style*****************************/

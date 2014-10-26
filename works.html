@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>开源小熊猫</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -32,11 +34,20 @@
           <p><small>&copy; 1993.03.26 | Hosted on GitHub Pages </small></p>
         </footer>
       </aside>
-      <article class="container">
-        <pre><code>$ cd your_repo_root/repo_name
-        $ git fetch origin
-        $ git checkout gh-pages
-        </code></pre>
+      <article class="container" id="works">
+        <nav>
+          <li><a href="">技术</a></li>
+          <li><a href="">设计</a></li>
+          <li><a href="">生活</a></li>
+          <li><a href="">其他</a></li>
+        </nav>
+        <section>
+          <ul class="data-li">
+            <li class="work-tech"><a href="http://www.feread.xyz/" target="_blank">
+              <img src="http://readit.sinaapp.com/wp-includes/images/panda.jpg"><p>阅读前端</p>
+            </a></li>
+          </ul>
+        </section>
       </article>
       
     </div>
@@ -44,5 +55,15 @@
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script src="javascripts/jquery-1.9.0.js"></script>
     <script src="javascripts/controller.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#works").animate({
+          'margin-left':'340px'
+        });
+        $("#works nav").animate({
+          'left':'340px'
+        });
+      });
+    </script>
   </body>
 </html>

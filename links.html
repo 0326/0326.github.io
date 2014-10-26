@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>开源小熊猫</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -41,43 +43,31 @@
           <li><a href="">其他</a></li>
         </nav>
         <section id="link-info">
-          <h2>资讯</h2>
+          <h2>Info.</h2>
           <ul class="data-li">
             <li>
-              <a href="http://www.w3cfuns.com/"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns一二三四</em></a>
+              <a href="http://www.w3cfuns.com/" target="_blank"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns</em></a>
             </li>
           </ul>
         </section>
         <section id="link-blog">
-          <h2>博客</h2>
+          <h2>Blog.</h2>
           <ul class="data-li">
-            <li>
-              <a href="http://www.w3cfuns.com/"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns一二三四</em></a>
-            </li>
           </ul>
         </section>
         <section id="link-tool">
-          <h2>资讯</h2>
+          <h2>Tool.</h2>
           <ul class="data-li">
-            <li>
-              <a href="http://www.w3cfuns.com/"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns一二三四</em></a>
-            </li>
           </ul>
         </section>
         <section id="link-learn">
-          <h2>资讯</h2>
+          <h2>Learn.</h2>
           <ul class="data-li">
-            <li>
-              <a href="http://www.w3cfuns.com/"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns一二三四</em></a>
-            </li>
           </ul>
         </section>
         <section id="link-other">
-          <h2>资讯</h2>
+          <h2>Other.</h2>
           <ul class="data-li">
-            <li>
-              <a href="http://www.w3cfuns.com/"><img src="http://www.w3cfuns.com/favicon.ico"><em>W3cfuns一二三四</em></a>
-            </li>
           </ul>
         </section>
       </article>
@@ -86,5 +76,15 @@
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script src="javascripts/jquery-1.9.0.js"></script>
     <script src="javascripts/controller.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#links").animate({
+          'margin-left':'340px'
+        });
+        $("#links nav").animate({
+          'left':'340px'
+        });
+      });
+    </script>
   </body>
 </html>

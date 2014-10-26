@@ -36,10 +36,10 @@
       </aside>
       <article class="container" id="works">
         <nav>
-          <li><a href="">技术</a></li>
-          <li><a href="">设计</a></li>
-          <li><a href="">生活</a></li>
-          <li><a href="">其他</a></li>
+          <li id="nav-work-tech"><a href="javascript:void(0)">技术</a></li>
+          <li id="nav-work-desi"><a href="javascript:void(0)">设计</a></li>
+          <li id="nav-work-life"><a href="javascript:void(0)">生活</a></li>
+          <li id="nav-work-other"><a href="javascript:void(0)">其他</a></li>
         </nav>
         <section>
           <ul class="data-li">
@@ -51,7 +51,6 @@
       </article>
       
     </div>
-    <script src="javascripts/scale.fix.js"></script>
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script src="javascripts/jquery-1.9.0.js"></script>
     <script src="javascripts/controller.js"></script>
@@ -64,6 +63,49 @@
           'left':'340px'
         });
       });
+
+      (function navSelectAnimation(){
+        $('#works nav').delegate('li','click',function(){
+          DATA.navs[this.id]=true;//点击选中
+          //一次点击被选中，两次取消选中状态
+          if($(this).hasClass('selected')){
+            $(this).removeClass('selected');
+          }
+          else{
+            $(this).addClass('selected');  
+          }
+          //设置其他导航状态
+          for(var key in DATA.navs){
+            if(key == this.id) continue;
+            if($(this).hasClass('selected')){
+              //有.selected说明是第一次点击，其他nav置为false
+              DATA.navs[key]=false;
+            }
+            else{
+              //第二次点击取消选中状态，让所有nav为true以显示
+              DATA.navs[key]=true;
+            }
+            //移除之前nav的选中状态，只保留一个.selected nav
+            if($('#'+key).hasClass("selected")){
+              $('#'+key).removeClass("selected");
+            }
+          }
+          showWorks();
+        });
+        function showWorks(){
+          // console.log(DATA.navs);
+          var works= $("#works .data-li").children();
+          for(var i=0;i<works.length;i++){
+            if(DATA.navs['nav-'+works[i].className] == true){
+              $(works[i]).fadeIn();//显示
+            }
+            else{
+              $(works[i]).fadeOut();
+            }
+          }
+        }
+
+      })();
     </script>
   </body>
 </html>

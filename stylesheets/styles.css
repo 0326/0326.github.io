@@ -228,6 +228,9 @@ article.container nav{
 article.container nav li{
   height: 25%;
 }
+article.container nav li.selected{
+  background: #6e60ca;
+}
 #works section ul li{
   width: 200px;height: 230px;
   margin:30px -20px 0 50px;

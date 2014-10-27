@@ -1,3 +1,7 @@
+setTimeout(function(){
+	var hdimg=$(".fixed-left .hdimg img")[0];
+	hdimg.src="http://tp2.sinaimg.cn/2625394005/180/40062973916/1";
+},3000);
 
 //data-box
 DATA={};
@@ -21,7 +25,7 @@ function createLinks (argument) {
 			{'name':'前端观察','hdimg':'http://www.qianduan.net/favicon.ico','url':'http://www.qianduan.net/'}
 			,{'name':'w3cfuns','hdimg':'http://www.w3cfuns.com/favicon.ico','url':'http://www.w3cfuns.com/'}
 			,{'name':'次碳酸钴','hdimg':'http://www.web-tinker.com/favicon.ico','url':'http://www.web-tinker.com/'}
-			,{'name':'次碳酸钴','hdimg':'http://www.web-tinker.com/favicon.ico','url':'http://www.web-tinker.com/'}
+			,{'name':'奇舞团','hdimg':'http://www.75team.com/favicon.ico','url':'http://www.75team.com/'}
 		];
 		DATA.links.tool=[
 			{'name':'git简易指南','hdimg':'https://avatars1.githubusercontent.com/u/8676306?v=2&s=40','url':'http://www.bootcss.com/p/git-guide/'}
@@ -36,7 +40,9 @@ function createLinks (argument) {
 			,{'name':'做好网站','hdimg':'http://www.dowebok.com/favicon.ico','url':'http://www.dowebok.com/'}
 			,{'name':'极客标签','hdimg':'http://www.gbtags.com/gb/networks/themes/img/gbin1.ico','url':'http://www.gbtags.com/gb/gbcollection.htm'}
 			,{'name':'优设网','hdimg':'http://www.uisdc.com/favicon.ico','url':'http://www.uisdc.com/'}
-			,{'name':'优设网','hdimg':'http://www.uisdc.com/favicon.ico','url':'http://www.uisdc.com/'}
+			,{'name':'tympanus-codrops','hdimg':'http://tympanus.net/codrops/favicon.ico','url':'http://tympanus.net/codrops/'}
+			,{'name':'abduzeedo','hdimg':'http://abduzeedo.com/files/favicon_0_0.ico','url':'http://abduzeedo.com/'}
+			,{'name':'smashing magazine','hdimg':'http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/favicon.png','url':'http://www.smashingmagazine.com/'}
 		]
 		DATA.links.other=[
 			{'name':'aliqin前端','hdimg':'http://aliqin.github.io/public/favicon.ico','url':'http://aliqin.github.io/'}
@@ -65,6 +71,7 @@ function createWorks (argument) {
 	(function initWorks(){
 		DATA.works=[
 			{'name':'IT阅读','type':'work-tech','hdimg':'images/works/itread.jpg','url':'http://itread.sinaapp.com/'}
+			,{'name':'微蓝动漫馆','type':'works-desi','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://dm.epweike.com/dongman/35/'}
 			,{'name':'TinyGame','type':'work-other','hdimg':'http://tinygame.sinaapp.com/static/images/tinygame-logo.gif','url':'http://tinygame.sinaapp.com/'}
 			,{'name':'Souvenir','type':'work-other','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://souvenir.sinaapp.com/'}
 			,{'name':'新浪微博','type':'work-life','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://weibo.com/liquanfeng326'}

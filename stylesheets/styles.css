@@ -176,20 +176,9 @@ article.container{
 /*left fixed nav end*/
 
 /***************************links page style*****************************/
-article.container nav{
-  width: 25px;height: 100%;
-  background-color: #373634;
-  position: fixed;left: 300px;top: 0;
-  text-align: center;
-  font-size: 20px;
-  padding: 0 5px;
-}
-article.container nav li{
-  height: 20%;
-}
 #link-info{margin-top: 30px;}
 #link-info,#link-blog,#link-tool,#link-learn,#link-other{
-  margin-left: 50px;
+  margin-left: 20px;
 }
 #links section h2{
   line-height: 25px;

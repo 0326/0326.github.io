@@ -33,7 +33,8 @@ function createLinks (argument) {
 			,{'name':'w3school','hdimg':'http://www.w3school.com.cn/favicon.ico','url':'http://www.w3school.com.cn/'}
 			,{'name':'colourco','hdimg':'http://colourco.de/favicon.ico','url':'http://colourco.de/'}
 			,{'name':'Devdocs','hdimg':'http://maxcdn.devdocs.io/images/icon-32.png','url':'http://devdocs.io/'}
-			,{'name':'ECMAScript 6入门','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
+			,{'name':'ECMAScript 6','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
+			,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}
 
 		];
 		DATA.links.learn=[
@@ -75,7 +76,7 @@ function createWorks (argument) {
 			{'name':'IT阅读','type':'work-tech','hdimg':'images/works/itread.jpg','url':'http://itread.sinaapp.com/'}
 			,{'name':'微蓝动漫馆','type':'works-desi','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://dm.epweike.com/dongman/35/'}
 			,{'name':'TinyGame','type':'work-other','hdimg':'http://tinygame.sinaapp.com/static/images/tinygame-logo.gif','url':'http://tinygame.sinaapp.com/'}
-			,{'name':'Souvenir','type':'work-other','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://souvenir.sinaapp.com/'}
+			// ,{'name':'Souvenir','type':'work-other','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://souvenir.sinaapp.com/'}
 			,{'name':'新浪微博','type':'work-life','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://weibo.com/liquanfeng326'}
 			,{'name':'Lofter','type':'work-life','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://liquanfeng.lofter.com/'}
 			,{'name':'Pyramid中文文档','type':'work-tech','hdimg':'http://www.pylonsproject.org/static/images/about-pylons.png','url':'http://pyramidoc.lofter.com/'}

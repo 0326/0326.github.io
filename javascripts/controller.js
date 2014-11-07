@@ -31,11 +31,12 @@ function createLinks (argument) {
 			{'name':'git简易指南','hdimg':'https://avatars1.githubusercontent.com/u/8676306?v=2&s=40','url':'http://www.bootcss.com/p/git-guide/'}
 			,{'name':'designerslist','hdimg':'http://www.designerslist.info/wp-content/themes/designerslist/assets/img/favicon.ico','url':'http://www.designerslist.info/'}
 			,{'name':'w3school','hdimg':'http://www.w3school.com.cn/favicon.ico','url':'http://www.w3school.com.cn/'}
+			,{'name':'sassmeister','hdimg':'http://sassmeister.com/favicon.ico','url':'http://sassmeister.com/'}
 			,{'name':'colourco','hdimg':'http://colourco.de/favicon.ico','url':'http://colourco.de/'}
 			,{'name':'Devdocs','hdimg':'http://maxcdn.devdocs.io/images/icon-32.png','url':'http://devdocs.io/'}
 			,{'name':'ECMAScript 6','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
 			,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}
-
+			,{'name':'百度脑图','hdimg':'http://www.baidu.com/favicon.ico','url':'http://naotu.baidu.com/edit.html'}
 		];
 		DATA.links.learn=[
 			{'name':'图灵社区','hdimg':'http://www.ituring.com.cn/favicon.ico','url':'http://www.ituring.com.cn/'}

@@ -47,7 +47,7 @@ function createLinks (argument) {
 			,{'name':'tympanus-codrops','hdimg':'http://tympanus.net/codrops/favicon.ico','url':'http://tympanus.net/codrops/'}
 			,{'name':'abduzeedo','hdimg':'http://abduzeedo.com/files/favicon_0_0.ico','url':'http://abduzeedo.com/'}
 			,{'name':'smashing magazine','hdimg':'http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/favicon.png','url':'http://www.smashingmagazine.com/'}
-			,{'name':'慕课网','hdimg','http://www.imooc.com/favicon.ico','url':'http://www.imooc.com/course/list'}
+			,{'name':'慕课网','hdimg':'http://www.imooc.com/favicon.ico','url':'http://www.imooc.com/course/list'}
 		]
 		DATA.links.other=[
 			{'name':'aliqin前端','hdimg':'http://aliqin.github.io/public/favicon.ico','url':'http://aliqin.github.io/'}

@@ -37,6 +37,7 @@ function createLinks (argument) {
 			,{'name':'ECMAScript 6','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
 			,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}
 			,{'name':'百度脑图','hdimg':'http://www.baidu.com/favicon.ico','url':'http://naotu.baidu.com/edit.html'}
+			,{'name':'RunJS',"hdimg":'http://runjs.cn/favicon.ico','url':'http://runjs.cn/code/dsl1y3ig'}
 		];
 		DATA.links.learn=[
 			{'name':'图灵社区','hdimg':'http://www.ituring.com.cn/favicon.ico','url':'http://www.ituring.com.cn/'}

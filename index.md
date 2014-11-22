@@ -1,5 +1,5 @@
 ﻿---
-layout: base
+layout: home
 ---
 
 <div id="loading"><p class="bunce1"></p><p class="bunce2"></p><p class="bunce3"></p></div>

@@ -1,0 +1,21 @@
+.nav-box{
+	box-shadow: 2px 2px 12px #aaa;
+	transition:width 1s, box-shadow 1s,transform 1s;
+	-moz-transition:width 1s, box-shadow 1s, -moz-transform 1s; /* Firefox 4 */
+	-webkit-transition:width 1s, box-shadow 1s, -webkit-transform 1s; /* Safari and Chrome */
+	-o-transition:width 1s, box-shadow 1s, -o-transform 1s; /* Opera */
+
+	transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);-moz-transform:rotate(45deg);
+}
+.nav-content{
+	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
+}
+#about:hover,#product:hover,#join:hover,#contact:hover,#cooperation:hover
+{
+	opacity: 0.7;
+	transform:rotate(405deg);
+	-moz-transform:rotate(405deg); /* Firefox 4 */
+	-webkit-transform:rotate(405deg); /* Safari and Chrome */
+	-o-transform:rotate(405deg); /* Opera */
+	box-shadow: 2px 2px 12px #fff inset;
+}

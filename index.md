@@ -1,5 +1,5 @@
 ﻿---
-layout: template_base
+layout: base
 ---
 
 <div id="loading"><p class="bunce1"></p><p class="bunce2"></p><p class="bunce3"></p></div>

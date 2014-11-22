@@ -1,0 +1,170 @@
+﻿/*global style*/
+body, div, h1, h2, h3, h4, h5, h6, p, ul, li { margin: 0; padding: 0;}
+body { 
+	font: 14px/2 "Microsoft Yahei",tahoma,"宋体",sans-serif;
+	height: 100%;
+	font-weight: lighter;
+}
+h1{font-size: 20px;line-height:24px;padding-top: 10px;padding-bottom: 10px;}
+h2{font-size: 16px;line-height:18px;padding-top: 10px;padding-bottom: 10px;}
+hr{width: 1000px;}
+a{color: #0d9572;}
+a:hover{color: #91cebe;}
+li{	list-style: none;}
+.none-href,.none-href:visited,.none-href:hover{color: #fff;text-decoration: none;}
+.icon45{
+	width: 45px;height: 45px;overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url(../images/iconsprite.png);
+}
+.icon48{
+	width: 48px;height: 48px;overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url(../images/iconsprite2.png);
+}
+.ico-next{background-position: -90px 0;}
+.ico-next:hover{background-position: -135px 0;}
+.ico-prev{background-position: 0 0;}
+.ico-prev:hover{background-position: -45px 0;}
+.ico-back{background-position: 0 0;}
+.ico-top{position: fixed;bottom: 50px;right: 50px;background-position: -48px 0;display: none;cursor: pointer;}
+
+/*global style end*/
+
+/**************************************main page style***************************/
+.wrapper{
+	width: 1000px;min-height: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+#canvas-wrapper{position: absolute;left: 0;top:0;}
+.main{width: 900px;height: 100%;}
+.main{
+	margin-left: 100px;height: 700px;
+	position: relative;
+}
+#main-bg{position: absolute;z-index: 1;}
+.nav-box{
+	position: absolute;z-index: 10; 
+	color: #fff;
+	width:180px;height: 180px;
+	overflow: hidden;
+}
+.nav-box:hover,.nav-content:hover,.ico-prev:hover,.ico-next:hover{cursor: pointer;}
+.nav-content{
+	text-align: center;vertical-align: middle;
+	width: 180px;height: 180px;
+	border-radius: 50%;
+}
+.nav-content .nav-title{
+	font-size: 20px;line-height: 30px;padding-top: 75px;
+	font-weight: lighter;
+}
+/*for news*/
+#news{
+	z-index: 1;
+	left: 358px;width: 360px;
+	top:116px;height: 360px;
+	background: #eee;
+}
+#news .nav-content{
+	position: absolute;left: 0;top: 0;
+	width: 510px;height: 510px;
+	margin-top: -75px;margin-left: -75px;
+	cursor: pointer;
+}
+#news .img-gallary li,.img-news{width: 100%;height: 100%;}
+#news .img-gallary li{width: 510px;height: 510px;}
+#news .ico-prev{
+	position: absolute;z-index: 1000;
+	bottom: 10px;left: 10px;margin-top: -23px;
+}
+#news .ico-next{
+	position: absolute;z-index: 1000;
+	top: 10px;right: 10px;
+}
+/*news end*/
+#about{
+	left: 193px;top:332px;
+	background: #78dacb;
+}
+#project{
+	left: 193px;top:79px;
+	background: #fd5e5e;
+}
+#link{
+	left: 66px;top:460px;
+	background: #9b79fe;
+}
+#cooperation{
+	left: 320px;top:460px;
+	background: #9adc77;
+}
+#blog{
+	left:-100px;top:160px;
+	color: #888;
+	background: #eee;
+}
+/**************************************main page style end***************************/
+
+
+
+/*********************************details page***************************************/
+#header{
+	height: 60px;
+	background: #fafafa;
+	border-top: 3px solid #019875;
+	position: relative;
+}
+#header .sitelogo{
+	position: absolute;
+	left: 0;top: 13px;
+	width: 230px;height: 44px;
+}
+#header .active{border-bottom: 3px solid #019875;}
+#header .active a{color: #333;}
+#header li{
+	display: inline-block;
+	*display: inline;
+	overflow: hidden;
+	font-size: 20px;line-height: 60px;
+	color: #999;
+	padding: 0 10px;
+}
+#header li:first-child{margin-left: 260px;}
+#header li:hover{border-bottom: 3px solid #91cebe;}
+#header a{text-decoration: none;color: #999;}
+#header a:hover{color: #333}
+
+.details{min-width:900px;width: 1000px;}
+.details .ico-back{
+	margin: 50px 0 20px 0;
+}
+.page-detail{margin:20px 0;color: #777;margin-top: 100px;}
+.page-detail h1{margin: 20px 0;padding-left: 10px;background: #91cebe;color: #fff;font-weight: lighter;}
+.page-detail h2{margin: 10px 0;color: #555;font-weight: lighter;border-left: 7px solid #91cebe;padding-left: 10px;}
+/*page-job*/
+.job{padding-bottom: 20px;}
+/*page-job end*/
+
+/*cooperation*/
+#cooplist li{
+	float: left;
+	height: 100px;
+}
+#cooplist:after{
+	display: block;
+	content: " ";
+	clear: both;
+}
+#cooplist i{display: none;}
+/******************************footer*******************************************/
+.footer{
+	position: absolute;
+	bottom: 0;width: 1000px;
+	text-align: center;
+	color: #999;
+	padding-bottom: 10px;
+	background: #fff;
+	margin-bottom: -50px;
+}

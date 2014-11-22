@@ -1,0 +1,11 @@
+auto: true
+
+markdown: rdiscount
+pygments: true
+paginate: 8
+#文章链接形式
+permalink: /blog/:title.panda
+
+title: 机智的大熊猫
+url: http://0326.github.io
+author_info: <a href="http://0326.github.com/">机智的大熊猫</a>

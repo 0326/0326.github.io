@@ -1,0 +1,73 @@
+/*网站加载动画*/
+#loading{
+	width: 120px;height: 120px;
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -60px;margin-top: -60px;
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+#loading > p{
+	width: 20px;
+	height: 20px;
+	margin: 10px;
+	background-color: #67CF22;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	-moz-animation: bouncedelay 1.4s infinite ease-in-out;
+	-o-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation: bouncedelay 1.4s infinite ease-in-out;
+	
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+#loading .bunce1{
+	-webkit-animation-delay: -0.32s;
+	-moz-animation-delay: -0.32s;
+	-o-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+#loading .bunce2{
+	-webkit-animation-delay: -0.16s;
+	-moz-animation-delay: -0.16s;
+	-o-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+/*导航box动画*/
+.nav-box{
+	box-shadow: 2px 2px 12px #aaa;
+	transition:width 1s, box-shadow 1s,transform 1s;
+	-ms-transition:width 1s, box-shadow 1s,transform 1s;
+	-moz-transition:width 1s, box-shadow 1s, -moz-transform 1s; /* Firefox 4 */
+	-webkit-transition:width 1s, box-shadow 1s, -webkit-transform 1s; /* Safari and Chrome */
+	-o-transition:width 1s, box-shadow 1s, -o-transform 1s; /* Opera */
+
+	transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);-moz-transform:rotate(45deg);
+}
+.nav-content{
+	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
+}
+#about:hover,#project:hover,#link:hover,#blog:hover,#cooperation:hover
+{
+	opacity: 0.7;
+	transform:rotate(405deg);
+	-ms-transform:rotate(405deg);
+	-moz-transform:rotate(405deg); /* Firefox 4 */
+	-webkit-transform:rotate(405deg); /* Safari and Chrome */
+	-o-transform:rotate(405deg); /* Opera */
+	box-shadow: 2px 2px 12px #fff inset;
+}

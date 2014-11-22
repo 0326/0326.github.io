@@ -3,29 +3,16 @@ copyright 武汉华中时讯科技有限公司
 writed by Li quanfeng. 
 date:2014/11/20
 ***************************************/
-$(document).ready(function(){
-    //nav-box导航动画
-    $(".nav-box").click(function(){
-        var name=this.id;
-        if(name=="news") return;
-
-        $(".main").animate({
-            'margin-left':'-1000px',
-        },1000,function(){
-            $(".main").fadeOut();
-            $(".ico-back").fadeIn();
-            $('#page-'+name).fadeIn();  
-        });
-        $(".ico-back").click(function(){
-            $('#page-'+name).fadeOut();
-            $(".ico-back").fadeOut();
-            $(".main").animate({
-                'margin-left':'100px',
-                'display':'block'
-            },1000);
-            $(".main").fadeIn();
-        });
-    });
+$(window).ready(function(){
+    // //menu点击切换效果
+    // $(".menu").on('click','li',function(){ 
+    //    $(".menu li").each(function(){
+    //         if($(this).hasClass("active")){
+    //             $(this).removeClass("active");
+    //         }
+    //    });
+    //    $(this).addClass("active");         
+    // }); 
     //图片轮播
     (function(){
         var num=$(".img-gallary").children().length;//图片数建议不大于5
@@ -108,4 +95,44 @@ $(document).ready(function(){
         }, false);
     };
     effectM();
+    //滑动最顶部top按钮
+    $(window).bind('scroll resize',function(){ 
+        $(".ico-top").goToTop(); 
+    }); 
 });
+
+//jQuery扩展返回顶部方法
+(function($){
+    var goToTopTime;
+    $.fn.goToTop=function(options){
+        var opts = $.extend({},$.fn.goToTop.def,options);
+        var $window=$(window);
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); // opera fix
+        var $this=$(this);
+        clearTimeout(goToTopTime);
+        goToTopTime=setTimeout(function(){
+            var shouldvisible=( $window.scrollTop() >= opts.startline )? true : false;
+            
+            if (shouldvisible){
+                $this.stop().addClass("animated  bounceInUp");
+                $this.show();
+            }else{
+                $this.stop().removeClass("animated  bounceInUp");
+                $this.fadeOut();
+            }
+        },30);
+        
+        $(this).click(function(event){
+            $body.stop().animate( { scrollTop: $(opts.targetObg).offset().top}, opts.duration);
+            $(this).blur();
+            event.preventDefault();
+            event.stopPropagation();
+        });
+    };
+    
+    $.fn.goToTop.def={
+        startline:30,//出现回到顶部按钮的滚动条scrollTop距离
+        duration:200,//回到顶部的速度时间
+        targetObg:"html"//目标位置
+    };
+})(jQuery);

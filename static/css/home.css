@@ -5,23 +5,30 @@ body {
 	height: 100%;
 	font-weight: lighter;
 }
-h1{font-size: 20px;line-height: 24px}
-h2{font-size: 16px;line-height:18px; }
+h1{font-size: 20px;line-height:24px;padding-top: 10px;padding-bottom: 10px;}
+h2{font-size: 16px;line-height:18px;padding-top: 10px;padding-bottom: 10px;}
 hr{width: 1000px;}
 a{color: #0d9572;}
 a:hover{color: #91cebe;}
-.display-none{display: none;}
-.none-href{color: #fff;text-decoration: none;}
-.none-href:visited{color: #fff}
-.icon{
+li{	list-style: none;}
+.none-href,.none-href:visited,.none-href:hover{color: #fff;text-decoration: none;}
+.icon45{
 	width: 45px;height: 45px;overflow: hidden;
 	background-repeat: no-repeat;
 	background-image: url(../images/iconsprite.png);
+}
+.icon48{
+	width: 48px;height: 48px;overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url(../images/iconsprite2.png);
 }
 .ico-next{background-position: -90px 0;}
 .ico-next:hover{background-position: -135px 0;}
 .ico-prev{background-position: 0 0;}
 .ico-prev:hover{background-position: -45px 0;}
+.ico-back{background-position: 0 0;}
+.ico-top{position: fixed;bottom: 50px;right: 50px;background-position: -48px 0;display: none;cursor: pointer;}
+
 /*global style end*/
 
 /**************************************main page style***************************/
@@ -103,14 +110,54 @@ a:hover{color: #91cebe;}
 
 
 /*********************************details page***************************************/
-.details{min-width:900px;width: 1000px;margin-top:100px;}
-.page-detail{display: none; margin:20px 0;color: #777;}
+#header{
+	height: 60px;
+	background: #fafafa;
+	border-top: 3px solid #019875;
+	position: relative;
+}
+#header .sitelogo{
+	position: absolute;
+	left: 0;top: 13px;
+	width: 230px;height: 44px;
+}
+#header .active{border-bottom: 3px solid #019875;}
+#header .active a{color: #333;}
+#header li{
+	display: inline-block;
+	*display: inline;
+	overflow: hidden;
+	font-size: 20px;line-height: 60px;
+	color: #999;
+	padding: 0 10px;
+}
+#header li:first-child{margin-left: 260px;}
+#header li:hover{border-bottom: 3px solid #91cebe;}
+#header a{text-decoration: none;color: #999;}
+#header a:hover{color: #333}
+
+.details{min-width:900px;width: 1000px;}
+.details .ico-back{
+	margin: 50px 0 20px 0;
+}
+.page-detail{margin:20px 0;color: #777;margin-top: 100px;}
 .page-detail h1{margin: 20px 0;padding-left: 10px;background: #91cebe;color: #fff;font-weight: lighter;}
 .page-detail h2{margin: 10px 0;color: #555;font-weight: lighter;border-left: 7px solid #91cebe;padding-left: 10px;}
 /*page-job*/
 .job{padding-bottom: 20px;}
 /*page-job end*/
 
+/*cooperation*/
+#cooplist li{
+	float: left;
+	height: 100px;
+}
+#cooplist:after{
+	display: block;
+	content: " ";
+	clear: both;
+}
+#cooplist i{display: none;}
 /******************************footer*******************************************/
 .footer{
 	position: absolute;

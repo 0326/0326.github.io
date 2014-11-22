@@ -5,8 +5,7 @@ layout: template_post
 <div class="index-content blog">
     <div class="section">
         <ul class="artical-cate">
-            <li><a href="/blog"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/collection/"><span>Collection</span></a></li>
+            <li><a href="/blog/"><span>Blog</span></a></li>
             <li class="on" style="text-align:right"><a href="/project/"><span>Project</span></a></li>
         </ul>
 
@@ -22,7 +21,5 @@ layout: template_post
             </li>
         {% endfor %}
         </ul>
-    </div>
-    <div class="aside">
     </div>
 </div>

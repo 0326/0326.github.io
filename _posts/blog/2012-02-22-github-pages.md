@@ -297,6 +297,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 
 ##搭建本地jekyll环境
 这里主要介绍一下在Mac OS X下面的安装过程，其他操作系统可以参考官方的[jekyll安装][15]。
+window下安装jekyll参考：<a href="http://blog.csdn.net/kong5090041/article/details/38408211">csdn</a>
 
 作为生活在水深火热的墙内人民，有必要进行下面一步修改gem的源，方便我们更快的下载所需组建：
 

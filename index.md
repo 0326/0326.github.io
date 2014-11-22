@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: template_base
 ---
 
 <div class="index-content blog">

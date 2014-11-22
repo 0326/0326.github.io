@@ -2,7 +2,7 @@
 layout: template_post
 ---
 
-<div class="index-content project">
+<div class="index-content blog">
     <div class="section">
         <ul class="artical-cate">
             <li><a href="/blog"><span>Blog</span></a></li>
@@ -13,7 +13,7 @@ layout: template_post
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="artical-list">
-        {% for post in site.categories.collection %}
+        {% for post in site.categories.blog %}
             <li>
                 <h2>
                     <a href="{{ post.url }}">{{ post.title }}</a>

@@ -88,11 +88,11 @@ li{	list-style: none;}
 	left: 193px;top:332px;
 	background: #78dacb;
 }
-#product{
+#project{
 	left: 193px;top:79px;
 	background: #fd5e5e;
 }
-#join{
+#link{
 	left: 66px;top:460px;
 	background: #9b79fe;
 }
@@ -100,7 +100,7 @@ li{	list-style: none;}
 	left: 320px;top:460px;
 	background: #9adc77;
 }
-#contact{
+#blog{
 	left:-100px;top:160px;
 	color: #888;
 	background: #eee;

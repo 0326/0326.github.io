@@ -61,7 +61,7 @@
 .nav-content{
 	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
 }
-#about:hover,#product:hover,#join:hover,#contact:hover,#cooperation:hover
+#about:hover,#project:hover,#link:hover,#blog:hover,#cooperation:hover
 {
 	opacity: 0.7;
 	transform:rotate(405deg);

@@ -160,10 +160,11 @@ li{	list-style: none;}
 	.wrapper{
 		width: 100%;
 	}
-	.main,.footer{
+	.main{
 		width: 90%;
 		margin: 0 auto;
 		position: relative;
+		text-align: center;
 	}
 	.nav-box{
 		position: relative;
@@ -176,4 +177,9 @@ li{	list-style: none;}
 	}
 	#news{z-index: 100;}
 	#main-bg{display: none;}
+	#links{padding: 10px;}
+	.footer{
+		width: 100%;
+		position: fixed;
+	}
 }

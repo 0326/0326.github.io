@@ -107,33 +107,38 @@ li{	list-style: none;}
 }
 
 /**************************************main page style end***************************/
+
+
 /***************************links page style*****************************/
-#link-info{margin-top: 30px;}
 #link-info,#link-blog,#link-tool,#link-learn,#link-other{
-  margin-left: 20px;
+  margin: 10px 0;
 }
-#links section h2{
+#link-info{margin-top: 30px;}
+
+#links h2{
   line-height: 25px;
   border-bottom: 1px dashed #777;
 }
-#links section ul li{
+#links li{
   width: 130px;height: 30px;
   margin: 5px;
   display: inline-block;
   white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
 }
-#links section ul li:hover{
+#links li:hover{
   background-color: #eee;
 }
-#links section ul a{
+#links a{
   line-height: 30px;
+  text-decoration: none;
 }
-#links section ul a img{
+#links ul img{
   width: 20px;height: 20px;
   vertical-align: middle;
 }
-#links section ul a em{
+#links ul em{
   margin-left: 5px;
+  font-style: normal;
 }
 /*links page style end*/
 

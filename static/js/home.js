@@ -20,12 +20,12 @@ $(window).ready(function(){
         setInterval(imgAnimate2D,5000);
 
         $(".ico-next").click(function(){
-            console.log('ico-next')
+            // console.log('ico-next')
             index=autoIndex(index,1);
             imgAnimate2D();
         });
         $(".ico-prev").click(function(){
-            console.log('ico-prev')
+            // console.log('ico-prev')
             index=autoIndex(index,-1);
             imgAnimate2D();
         });
@@ -47,21 +47,37 @@ $(window).ready(function(){
             
         }
         function autoIndex(i,sign){
-            if(i>=num-1){
+            if(sign==1 && i==num-1){
                 i=0;
             }
-            else if(sign==-1){//prev,自减
-                if(i==0){
-                    i=num-1;
-                }
-                else{
-                    i--;
-                }
+            else if(sign==1){
+                i++;
+            }
+            else if(sign==-1 && i=0){
+                i=num-1;
+            }
+            else if(sign==-1){
+                i--;
             }
             else{
-                i++;//next,自增
+                console.log('params error...')
             }
             return i;
+            // if(i>=num-1){
+            //     i=0;
+            // }
+            // else if(sign==-1){//prev,自减
+            //     if(i==0){
+            //         i=num-1;
+            //     }
+            //     else{
+            //         i--;
+            //     }
+            // }
+            // else{
+            //     i++;//next,自增
+            // }
+            // return i;
         }
     })();
     //init particleground 粒子动画

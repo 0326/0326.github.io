@@ -80,7 +80,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     width:48%; cursor:pointer; 
 }
 .index-content .artical-cate li a,
-.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#444; width:100%; }
+.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#888; width:100%; }
 .index-content .artical-cate li a:hover { text-decoration:none; }
 .index-content .artical-cate li.on span{ color:#000; }
 

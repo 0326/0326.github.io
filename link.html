@@ -1,4 +1,4 @@
-﻿---
+---
 layout: template_base
 ---
 
@@ -6,36 +6,11 @@ layout: template_base
 <div class="main animated  lightSpeedIn">
 	<h1>hahaha</h1>
 </div>
-
-
-
-<!--
-<div class="container" id="links">
-	<section id="link-info">
-	  <h2>Info.</h2>
-	  <ul class="data-li">
-	  </ul>
-	</section>
-	<section id="link-blog">
-	  <h2>Blog.</h2>
-	  <ul class="data-li">
-	  </ul>
-	</section>
-	<section id="link-tool">
-	  <h2>Tool.</h2>
-	  <ul class="data-li">
-	  </ul>
-	</section>
-	<section id="link-learn">
-	  <h2>Learn.</h2>
-	  <ul class="data-li">
-	  </ul>
-	</section>
-	<section id="link-other">
-	  <h2>Other.</h2>
-	  <ul class="data-li">
-	  </ul>
-	</section>
-</div>
-<script src="/static/js/data.js"></script>
- -->
+<script type="text/javascript">
+$(".main").css({'display':'none'});
+$(window).load(function(){
+    $("#loading").fadeOut("normal",function(){
+        $(".main").fadeIn();
+    });
+});
+</script>

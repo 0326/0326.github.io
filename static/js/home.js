@@ -53,7 +53,7 @@ $(window).ready(function(){
             else if(sign==1){
                 i++;
             }
-            else if(sign==-1 && i=0){
+            else if(sign==-1 && i==0){
                 i=num-1;
             }
             else if(sign==-1){

@@ -20,14 +20,10 @@ $(window).ready(function(){
         setInterval(function(){imgAnimate2D(1);},5000);
 
         $(".ico-next").click(function(){
-            console.log('ico-next')
-            // index=autoIndex(index,0);
-            imgAnimate2D(0);
+            imgAnimate2D(1);
         });
         $(".ico-prev").click(function(){
-            console.log('ico-prev')
-            // index=autoIndex(index,1);
-            imgAnimate2D(1);
+            imgAnimate2D(0);
         });
         $("#main-bg").click(function(){
             
@@ -40,7 +36,7 @@ $(window).ready(function(){
             index=autoIndex(index,parseInt(sign));
             $(".img-gallary").animate({
                 'margin-top':'-'+index*h+'px',
-            },500);
+            },300);
         }
         function imgAnimate3D(){
             

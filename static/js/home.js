@@ -17,7 +17,7 @@ $(window).ready(function(){
         var num=$(".img-gallary").children().length;//图片数建议不大于5
         var index=0;
         var h=$("#news .nav-content").height();
-        setInterval("imgAnimate2D(1)",5000);
+        setInterval(function(){imgAnimate2D(1);},5000);
 
         $(".ico-next").click(function(){
             console.log('ico-next')

@@ -21,12 +21,12 @@ $(window).ready(function(){
 
         $(".ico-next").click(function(){
             // console.log('ico-next')
-            index=autoIndex(index,1);
+            index=autoIndex(index,-1);
             imgAnimate2D();
         });
         $(".ico-prev").click(function(){
             // console.log('ico-prev')
-            index=autoIndex(index,-1);
+            index=autoIndex(index,1);
             imgAnimate2D();
         });
         $("#main-bg").click(function(){

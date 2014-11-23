@@ -17,17 +17,17 @@ $(window).ready(function(){
         var num=$(".img-gallary").children().length;//图片数建议不大于5
         var index=0;
         var h=$("#news .nav-content").height();
-        setInterval(imgAnimate2D,5000);
+        setInterval("imgAnimate2D(1)",5000);
 
         $(".ico-next").click(function(){
             console.log('ico-next')
-            index=autoIndex(index,0);
-            imgAnimate2D();
+            // index=autoIndex(index,0);
+            imgAnimate2D(0);
         });
         $(".ico-prev").click(function(){
             console.log('ico-prev')
-            index=autoIndex(index,1);
-            imgAnimate2D();
+            // index=autoIndex(index,1);
+            imgAnimate2D(1);
         });
         $("#main-bg").click(function(){
             
@@ -36,12 +36,11 @@ $(window).ready(function(){
             console.log("this.img-gallary")
         });
         //图片切换动画
-        function imgAnimate2D(){
+        function imgAnimate2D(sign){
+            index=autoIndex(index,parseInt(sign));
             $(".img-gallary").animate({
                 'margin-top':'-'+index*h+'px',
             },500);
-            index=autoIndex(index,1);
-            // console.log(index)
         }
         function imgAnimate3D(){
             

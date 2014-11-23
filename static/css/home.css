@@ -142,7 +142,14 @@ li{	list-style: none;}
 }
 /*links page style end*/
 
-
+/*about me page*/
+#aboutme{
+	width: 80%;margin: 0 auto;
+	padding: 5%;
+	text-align: center;
+}
+#aboutme img{border-radius: 50%;width: 128px;}
+/*about me end*/
 /******************************footer*******************************************/
 .footer{
 	position: absolute;

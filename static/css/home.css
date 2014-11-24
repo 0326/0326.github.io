@@ -7,10 +7,11 @@ body {
 }
 h1{font-size: 20px;line-height:24px;padding-top: 10px;padding-bottom: 10px;}
 h2{font-size: 16px;line-height:18px;padding-top: 10px;padding-bottom: 10px;}
-a{color: #0d9572;}
+a{color: #0d9572;cursor: pointer;}
 a:hover{color: #91cebe;}
 li{	list-style: none;}
 .none-href,.none-href:visited,.none-href:hover{color: #fff;text-decoration: none;}
+.text-center{text-align: center;}
 .icon45{
 	width: 45px;height: 45px;overflow: hidden;
 	background-repeat: no-repeat;

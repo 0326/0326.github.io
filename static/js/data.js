@@ -33,6 +33,7 @@ function createLinks (argument) {
             ,{'name':'w3school','hdimg':'http://www.w3school.com.cn/favicon.ico','url':'http://www.w3school.com.cn/'}
             ,{'name':'sassmeister','hdimg':'http://sassmeister.com/favicon.ico','url':'http://sassmeister.com/'}
             ,{'name':'colourco','hdimg':'http://colourco.de/favicon.ico','url':'http://colourco.de/'}
+            ,{'name':'materialpalette','hdimg':'http://assets0.materialup.com/assets/palette/favicon-60ce4eafcc4e3c6319219e26ff9e22b7.ico','url':'http://www.materialpalette.com'}
             ,{'name':'Devdocs','hdimg':'http://maxcdn.devdocs.io/images/icon-32.png','url':'http://devdocs.io/'}
             ,{'name':'ECMAScript 6','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
             ,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}

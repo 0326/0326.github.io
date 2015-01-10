@@ -36,6 +36,7 @@ function createLinks (argument) {
             ,{'name':'materialpalette','hdimg':'http://assets0.materialup.com/assets/palette/favicon-60ce4eafcc4e3c6319219e26ff9e22b7.ico','url':'http://www.materialpalette.com'}
             ,{'name':'Devdocs','hdimg':'http://maxcdn.devdocs.io/images/icon-32.png','url':'http://devdocs.io/'}
             ,{'name':'ECMAScript 6','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'http://es6.ruanyifeng.com/'}
+            ,{'name':'ES6to5','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'https://6to5.org'}
             ,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}
             ,{'name':'百度脑图','hdimg':'http://www.baidu.com/favicon.ico','url':'http://naotu.baidu.com/edit.html'}
             ,{'name':'RunJS',"hdimg":'http://runjs.cn/favicon.ico','url':'http://runjs.cn/code/dsl1y3ig'}

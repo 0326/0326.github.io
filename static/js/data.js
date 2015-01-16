@@ -39,6 +39,7 @@ function createLinks (argument) {
             ,{'name':'ES6to5','hdimg':'http://es6.ruanyifeng.com/favicon.ico','url':'https://6to5.org'}
             ,{'name':'HTML5 标准','hdimg':'http://www.w3.org/2008/site/images/favicon.ico','url':'http://www.w3.org/TR/2014/REC-html5-20141028/'}
             ,{'name':'百度脑图','hdimg':'http://www.baidu.com/favicon.ico','url':'http://naotu.baidu.com/edit.html'}
+            ,{'name':'nitrous','hdimg':'https://www.nitrous.io/favicon.ico','url':'https://www.nitrous.io'}
             ,{'name':'RunJS',"hdimg":'http://runjs.cn/favicon.ico','url':'http://runjs.cn/code/dsl1y3ig'}
         ];
         DATA.links.learn=[

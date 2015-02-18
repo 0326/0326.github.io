@@ -64,8 +64,8 @@ $(window).ready(function(){
     //init particleground 粒子动画
     $("#canvas-wrapper").css({'height':$(window).height()+'px','width':$(window).width()+'px'});
     $('#canvas-wrapper').particleground({
-        dotColor: '#eee',
-        lineColor: '#efefef'
+        dotColor: '#9af4e5',
+        lineColor: '#c9f2eb'
     }); 
     //鼠标移动反差效果
     function effectM(){

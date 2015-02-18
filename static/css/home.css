@@ -12,23 +12,6 @@ a:hover{color: #91cebe;}
 li{	list-style: none;}
 .none-href,.none-href:visited,.none-href:hover{color: #fff;text-decoration: none;}
 .text-center{text-align: center;}
-.icon45{
-	width: 45px;height: 45px;overflow: hidden;
-	background-repeat: no-repeat;
-	background-image: url(../images/iconsprite.png);
-}
-.icon48{
-	width: 48px;height: 48px;overflow: hidden;
-	background-repeat: no-repeat;
-	background-image: url(../images/iconsprite2.png);
-}
-.ico-next{background-position: -90px 0;}
-.ico-next:hover{background-position: -135px 0;}
-.ico-prev{background-position: 0 0;}
-.ico-prev:hover{background-position: -45px 0;}
-.ico-back{background-position: 0 0;}
-.ico-top{position: fixed;bottom: 50px;right: 50px;background-position: -48px 0;display: none;cursor: pointer;}
-
 /*global style end*/
 
 /**************************************main page style***************************/
@@ -58,7 +41,7 @@ li{	list-style: none;}
 	border-radius: 50%;
 }
 .nav-content .nav-title{
-	font-size: 20px;line-height: 30px;padding-top: 75px;
+	font-size: 20px;line-height: 30px;padding-top: 70px;
 	font-weight: lighter;
 	height: 40px;
 }
@@ -75,32 +58,26 @@ li{	list-style: none;}
 	margin-top: -75px;margin-left: -75px;
 	cursor: pointer;
 }
-#news .img-gallary li,.img-news{width: 100%;height: 100%;}
+#news .img-gallary li,.img-news{height: 100%;}
 #news .img-gallary li{width: 510px;height: 510px;}
-#news .ico-prev{
-	position: absolute;z-index: 1000;
-	bottom: 10px;left: 10px;margin-top: -23px;
-}
-#news .ico-next{
-	position: absolute;z-index: 1000;
-	top: 10px;right: 10px;
-}
 /*news end*/
 #about{
 	left: 193px;top:332px;
-	background: #78dacb;
+	background: #9b79fe;
 }
 #project{
 	left: 193px;top:79px;
-	background: #fd5e5e;
+	/*background: #fd5e5e;*/
+	background: #9adc77;
 }
 #link{
 	left: 66px;top:460px;
-	background: #9b79fe;
+	background: #78dacb;
 }
 #cooperation{
 	left: 320px;top:460px;
-	background: #9adc77;
+	
+	background: #eee;
 }
 #blog{
 	left:-100px;top:160px;
@@ -153,7 +130,7 @@ li{	list-style: none;}
 #aboutme img{border-radius: 50%;width: 128px;}
 /*about me end*/
 /******************************footer*******************************************/
-.footer{
+/*.footer{
 	position: absolute;
 	bottom: 0;width: 1000px;
 	text-align: center;
@@ -162,7 +139,7 @@ li{	list-style: none;}
 	background: #fff;
 	margin-bottom: -50px;
 }
-.footer a{text-decoration: none;}
+.footer a{text-decoration: none;}*/
 
 /*******************response**********************************/
 @media screen and (max-width: 1000px){
@@ -193,4 +170,12 @@ li{	list-style: none;}
 		position: fixed;
 		margin-bottom: 0;
 	}
+}
+
+/*404 page*/
+.err404-box{
+	padding-top: 10%;
+}
+.err404-box h1{
+	font-weight: 100;
 }

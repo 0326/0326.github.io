@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*网站加载动画*/
 #loading{
 	width: 120px;height: 120px;
@@ -62,13 +64,37 @@
 .nav-content{
 	transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
 }
-#about:hover,#project:hover,#link:hover,#blog:hover,#cooperation:hover
+#about:hover,#link:hover,#cooperation:hover
 {
 	/*opacity: 0.7;*/
-	transform:rotate(405deg);
-	-ms-transform:rotate(405deg);
-	-moz-transform:rotate(405deg); /* Firefox 4 */
-	-webkit-transform:rotate(405deg); /* Safari and Chrome */
-	-o-transform:rotate(405deg); /* Opera */
-	box-shadow: 2px 2px 12px #fff inset;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-moz-transform:rotate(90deg); /* Firefox 4 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+	/*box-shadow: 2px 2px 12px #fff inset;*/
+}
+#blog:hover,#project:hover
+{
+	/*opacity: 0.7;*/
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg); /* Firefox 4 */
+	-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	-o-transform:rotate(0deg); /* Opera */
+	/*box-shadow: 2px 2px 12px #fff inset;*/
+}
+
+.img-news{
+	transition:transform 1s;
+	-ms-transition:transform 1s;
+	-moz-transition: -moz-transform 1s; /* Firefox 4 */
+	-webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+}
+.img-news:hover{
+	transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	-moz-transform:scale(1.2); /* Firefox 4 */
+	-webkit-transform:scale(1.2); /* Safari and Chrome */
+	-o-transform:scale(1.2); /* Opera */
 }

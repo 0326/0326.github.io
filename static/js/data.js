@@ -1,15 +1,7 @@
-setTimeout(function(){
-    var hdimg=$(".fixed-left .hdimg img")[0];
-    hdimg.src="http://tp2.sinaimg.cn/2625394005/180/40062973916/1";
-},3000);
-
-//data-box
-DATA={};
-createLinks();
-createWorks();
-
-function createLinks (argument) {
-    (function initLinks(){
+(function () {
+    var DATA={},timer=null;
+    
+    function initLinks(){
         DATA.links={info:[],blog:[],tool:[],learn:[],other:[]};
         DATA.links.info=[
             {'name':'外刊评论','hdimg':'http://www.vaikan.com/favicon.ico','url':'http://www.vaikan.com/'}
@@ -54,48 +46,38 @@ function createLinks (argument) {
             ,{'name':'慕课网','hdimg':'http://www.imooc.com/favicon.ico','url':'http://www.imooc.com/course/list'}
         ]
         DATA.links.other=[
-            {'name':'aliqin前端','hdimg':'http://aliqin.github.io/public/favicon.ico','url':'http://aliqin.github.io/'}
+            {'name':'0326博客','hdimg':'http://0326.github.io/favicon.ico','url':'http://0326.github.io/'}
+            ,{'name':'aliqin前端','hdimg':'http://aliqin.github.io/public/favicon.ico','url':'http://aliqin.github.io/'}
             ,{'name':'腾讯CDC','hdimg':'http://cdc.tencent.com/favicon.ico','url':'http://cdc.tencent.com/'}
             ,{'name':'百度FEX','hdimg':'http://www.baidu.com/favicon.ico','url':'http://fex.baidu.com/'}
             ,{'name':'黄蜂网','hdimg':'http://woofeng.cn/favicon.ico','url':'http://woofeng.cn/'}
             ,{'name':'新浪SAE','hdimg':'http://sae.sina.com.cn/favicon.ico','url':'http://sae.sina.com.cn/'}
             ,{'name':'我是PM','hdimg':'http://www.woshipm.com/wp-content/themes/ui90_e33/images/favicon.ico','url':'http://www.woshipm.com/'}
         ];
-    })();
-    var key,i,obj;
-    for(key in DATA.links){
-        obj=DATA.links[key];
-        for(i=0;i<obj.length;i++){
-            $("#link-"+key+" .data-li").append(
-                '<li><a target="_blank" href="'+obj[i]['url']+'">'+
-                '<img src="'+obj[i]['hdimg']+'"><em>'+obj[i]['name']+'</em>'+
-                '</a></li>'
-            );
+    }
+
+    function createLinks (argument) {
+        var key,i,obj;
+        initLinks();
+        for(key in DATA.links){
+            obj=DATA.links[key];
+            for(i=0;i<obj.length;i++){
+                $("#link-"+key+" .data-li").append(
+                    '<li><a target="_blank" href="'+obj[i]['url']+'">'+
+                    '<img src="'+obj[i]['hdimg']+'"><em>'+obj[i]['name']+'</em>'+
+                    '</a></li>'
+                );
+            }
         }
     }
-}
 
-function createWorks (argument) {
-    DATA.navs={'nav-work-tech':true,'nav-work-desi':true,'nav-work-life':true,'nav-work-other':true};
-    (function initWorks(){
-        DATA.works=[
-            {'name':'IT阅读','type':'work-tech','hdimg':'images/works/itread.jpg','url':'http://itread.sinaapp.com/'}
-            ,{'name':'微蓝动漫馆','type':'works-desi','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://dm.epweike.com/dongman/35/'}
-            ,{'name':'TinyGame','type':'work-other','hdimg':'http://tinygame.sinaapp.com/static/images/tinygame-logo.gif','url':'http://tinygame.sinaapp.com/'}
-            // ,{'name':'Souvenir','type':'work-other','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://souvenir.sinaapp.com/'}
-            ,{'name':'新浪微博','type':'work-life','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://weibo.com/liquanfeng326'}
-            ,{'name':'Lofter','type':'work-life','hdimg':'http://tp2.sinaimg.cn/2625394005/180/40062973916/1','url':'http://liquanfeng.lofter.com/'}
-            ,{'name':'Pyramid中文文档','type':'work-tech','hdimg':'http://www.pylonsproject.org/static/images/about-pylons.png','url':'http://pyramidoc.lofter.com/'}
-            ,{'name':'CSDN博客','type':'work-tech','hdimg':'http://avatar.csdn.net/A/F/B/1_liquanfeng326.jpg','url':'http://blog.csdn.net/liquanfeng326'}
-            ,{'name':'站酷网','type':'work-desi','hdimg':'http://zcimg.zcool.com.cn/zcimg/e8dc53b29ec400000181f17e1d13.jpg','url':'http://liquanfeng.zcool.com.cn/'}
-        ];
-    })();
-    var work;
-    for(var i=0;i<DATA.works.length;i++){
-        $("#works .data-li").append(
-            '<li class="'+DATA.works[i]['type']+'"><a href="'+DATA.works[i]['url']+'" target="_blank">'+
-              '<img src="'+DATA.works[i]['hdimg']+'"><p>'+DATA.works[i]['name']+'</p>'+
-            '</a></li>'
-        );
-    }
-}
+    timer = setInterval(function(){
+        if($ && jQuery){
+            createLinks();
+            clearInterval(timer);
+        }
+        else{
+            console.log("jQuery is loading...")
+        }
+    }, 500);
+})()

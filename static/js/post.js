@@ -27,8 +27,11 @@ $(document).ready(function(){
         var href = $(this).attr('href');
         if(href){
             if(href.indexOf('#') == 0){
-            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+
+            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('0326.github.com')>-1 ){
+            
             }else if ($(element).has('img').length){
+            
             }else{
                 $(this).attr('target','_blank');
                 $(this).addClass('external');
@@ -189,7 +192,7 @@ $(document).ready(function(){
         }
     })();
 
-    $.getScript('/js/prettify/prettify.js',function(){
+    $.getScript('/static/libs/prettify/prettify.js',function(){
         prettyPrint();
     });
 
@@ -198,7 +201,7 @@ $(document).ready(function(){
     }
 
     if(/css3-animation/.test(location.href)){
-        $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
-        $.getScript('/js/css3-ani.js',function(){});
+        $("head").append("<link rel='stylesheet' type='text/css' href='/static/css/css3-ani.css'/>");
+        $.getScript('/static/js/css3-ani.js',function(){});
     }
 });

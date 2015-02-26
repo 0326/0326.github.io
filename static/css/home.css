@@ -1,97 +1,142 @@
-﻿/*global style*/
-body, div, h1, h2, h3, h4, h5, h6, p, ul, li { margin: 0; padding: 0;}
+﻿@charset "UTF-8";
+
+/**********************global style**********************/
+body, div, h1, h2, h3, h4, h5, h6, p, ul, li { 
+	margin: 0; 
+	padding: 0;
+}
 body { 
-	font: 14px/2 "Microsoft Yahei",tahoma,"宋体",sans-serif;
 	height: 100%;
+	font: 14px/2 "Microsoft Yahei",tahoma,"宋体",sans-serif;
 	font-weight: lighter;
 }
-h1{font-size: 20px;line-height:24px;padding-top: 10px;padding-bottom: 10px;}
-h2{font-size: 16px;line-height:18px;padding-top: 10px;padding-bottom: 10px;}
-a{color: #0d9572;cursor: pointer;}
+h1{font-size: 20px;
+	line-height:24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h2{font-size: 16px;
+	line-height:18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+a{
+	color: #0d9572;
+	cursor: pointer;
+}
 a:hover{color: #91cebe;}
 li{	list-style: none;}
-.none-href,.none-href:visited,.none-href:hover{color: #fff;text-decoration: none;}
 .text-center{text-align: center;}
-/*global style end*/
+.none-href,.none-href:visited,.none-href:hover{
+	color: #fff;
+	text-decoration: none;
+}
 
-/**************************************main page style***************************/
+/********************************main page style***************************/
 .wrapper{
-	width: 1000px;min-height: 700px;
+	width: 1000px;
+	min-height: 700px;
 	margin: 0 auto;
 	position: relative;
 }
-
-#canvas-wrapper{position: absolute;left: 0;top:0;}
-.main{width: 900px;height: 100%;}
-.main{
-	margin-left: 100px;height: 700px;
-	position: relative;
+#canvas-wrapper{
+	left: 0;
+	top:0;
+	position: absolute;
 }
-#main-bg{position: absolute;z-index: 1;}
+.main{
+	width: 900px;
+	height: 700px;
+	margin-left: 100px;
+	position: relative;
+	display: none;
+}
+#main-bg{
+	position: absolute;
+	z-index: 1;
+}
 .nav-box{
-	position: absolute;z-index: 10; 
+	width:180px;
+	height: 180px;
+	position: absolute;
+	z-index: 10; 
 	color: #fff;
-	width:180px;height: 180px;
 	overflow: hidden;
 }
 .nav-box:hover,.nav-content:hover,.ico-prev:hover,.ico-next:hover{cursor: pointer;}
 .nav-content{
-	text-align: center;vertical-align: middle;
-	width: 180px;height: 180px;
+	width: 180px;
+	height: 180px;
 	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
 }
 .nav-content .nav-title{
-	font-size: 20px;line-height: 30px;padding-top: 70px;
-	font-weight: lighter;
 	height: 40px;
+	padding-top: 70px;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: lighter;
+	
 }
 /*for news*/
 #news{
+	left: 358px;
+	top:116px;
+	width: 360px;
+	height: 360px;
 	z-index: 1;
-	left: 358px;width: 360px;
-	top:116px;height: 360px;
 	background: #eee;
 }
 #news .nav-content{
-	position: absolute;left: 0;top: 0;
-	width: 510px;height: 510px;
-	margin-top: -75px;margin-left: -75px;
+	left: 0;
+	top: 0;
+	width: 510px;
+	height: 510px;
+	margin-top: -75px;
+	margin-left: -75px;
+  position: absolute;
 	cursor: pointer;
+
 }
 #news .img-gallary li,.img-news{height: 100%;}
-#news .img-gallary li{width: 510px;height: 510px;}
+#news .img-gallary li{
+	width: 510px;
+	height: 510px;
+}
 /*news end*/
+
 #about{
-	left: 193px;top:332px;
+	left: 193px;
+	top:332px;
 	background: #9b79fe;
 }
 #project{
-	left: 193px;top:79px;
+	left: 193px;
+	top:79px;
 	/*background: #fd5e5e;*/
 	background: #9adc77;
 }
 #link{
-	left: 66px;top:460px;
+	left: 66px;
+	top:460px;
 	background: #78dacb;
 }
 #cooperation{
-	left: 320px;top:460px;
-	
+	left: 320px;
+	top:460px;
 	background: #eee;
 }
 #blog{
-	left:-100px;top:160px;
+	left:-100px;
+	top:160px;
 	color: #888;
 	background: #eee;
 }
 
-/**************************************main page style end***************************/
-
 
 /***************************links page style*****************************/
-#link-info,#link-blog,#link-tool,#link-learn,#link-other{
-  margin: 10px 0;
-}
+#link-info,#link-blog,#link-tool,#link-learn,#link-other{margin: 10px 0;}
 #link-info{margin-top: 30px;}
 
 #links h2{
@@ -99,19 +144,20 @@ li{	list-style: none;}
   border-bottom: 1px dashed #777;
 }
 #links li{
-  width: 130px;height: 30px;
+  width: 130px;
+  height: 30px;
   margin: 5px;
   display: inline-block;
-  white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
+  white-space:nowrap;
+  -o-text-overflow:ellipsis;  
+     text-overflow:ellipsis; 
+          overflow:hidden;
 }
-#links li:hover{
-  background-color: #eee;
-}
-#links a{
-  line-height: 30px;
-}
+#links li:hover{background-color: #eee;}
+#links a{line-height: 30px;}
 #links ul img{
-  width: 20px;height: 20px;
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
 }
 #links ul em{
@@ -122,26 +168,19 @@ li{	list-style: none;}
 
 /*about me page*/
 #aboutme{
-	width: 80%;margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
 	padding: 5%;
 	text-align: center;
 }
-#aboutme h1,#aboutme h2,#aboutme h3{color:#999; }
-#aboutme img{border-radius: 50%;width: 128px;}
-/*about me end*/
-/******************************footer*******************************************/
-/*.footer{
-	position: absolute;
-	bottom: 0;width: 1000px;
-	text-align: center;
-	color: #999;
-	padding-bottom: 10px;
-	background: #fff;
-	margin-bottom: -50px;
+#aboutme img{
+	border-radius: 50%;
+	width: 128px;
 }
-.footer a{text-decoration: none;}*/
+/*about me end*/
 
-/*******************response**********************************/
+
+/************************response*******************************/
 @media screen and (max-width: 1000px){
 	.wrapper{
 		width: 100%;
@@ -158,9 +197,14 @@ li{	list-style: none;}
 		display: inline-block;
 	}
 	#news,#about,#blog,#project,#link,#cooperation{
+		width: 180px;
+		height: 180px;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		position: relative;
 		display: inline-block;
-		width: 180px;height: 180px;top:0;left: 0;right: 0;bottom: 0;
 	}
 	#news{display: none;}
 	#main-bg{display: none;}
@@ -172,10 +216,7 @@ li{	list-style: none;}
 	}
 }
 
-/*404 page*/
-.err404-box{
-	padding-top: 10%;
-}
-.err404-box h1{
-	font-weight: 100;
-}
+
+/***************************404 page style*****************************/
+.err404-box{padding-top: 10%;}
+.err404-box h1{font-weight: 100;}

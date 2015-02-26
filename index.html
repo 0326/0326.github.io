@@ -5,7 +5,7 @@ layout: template_base
 <div class="main animated  lightSpeedIn">
 	<img id="main-bg" src="/static/images/bg.png">
 	<div class="nav-box" id="about">
-		<a  class="none-href" href="/about/">
+		<a  class="none-href" href="/about.html">
 		<div class="nav-content">
 			<h2 class="nav-title">关于作者</h2>
 		</div>
@@ -19,7 +19,7 @@ layout: template_base
 		</a>
 	</div>
 	<div class="nav-box" id="link">
-		<a  class="none-href" href="/link/">
+		<a  class="none-href" href="/link.html">
 		<div class="nav-content">
 		<h2 class="nav-title">前端链接</h2>
 		</div>
@@ -47,11 +47,3 @@ layout: template_base
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-$(".main").css({'display':'none'});
-$(window).load(function(){
-    $("#loading").fadeOut("normal",function(){
-        $(".main").fadeIn();
-    });
-});
-</script>

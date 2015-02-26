@@ -6,5 +6,5 @@ paginate: 8
 #文章链接形式
 permalink: /article/:title.panda
 
-title: 机智的大熊猫
+title: 机智的大熊猫|github博客 
 author_info: <a href="http://0326.github.io">机智的大熊猫</a>

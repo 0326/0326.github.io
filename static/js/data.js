@@ -10,7 +10,7 @@
             ,{'name':'CSDN','hdimg':'http://csdnimg.cn/public/favicon.ico','url':'http://www.csdn.net/'}
             ,{'name':'推酷','hdimg':'http://www.tuicool.com/favicon.ico','url':'http://www.tuicool.com/'}
             ,{'name':'伯乐在线','hdimg':'http://blog.jobbole.com/favicon.ico','url':'http://blog.jobbole.com/'}
-            
+            ,{'name':'codeproject','hdimg':'http://www.codeproject.com/favicon.ico','url':'http://www.codeproject.com'}
 
         ];
         DATA.links.blog=[

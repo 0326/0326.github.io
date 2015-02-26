@@ -22,7 +22,23 @@
         @media screen and (max-width: 1020px){
             body { background:#fff; }
         }
+        #uyan_frame{
+            padding-top: 1em;
+            border-top:1px solid #ccc;
+        }
+        #uyan_frame img{margin:0;}
+        #uyan_frame a[href="http://www.uyan.cc"]{display: none;}
     </style>
+    <script>
+        //baidu tongji
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?4a4a4c406b3766077ef3c048ab442092";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
     <div id="content">
@@ -30,6 +46,7 @@
             <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
             <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
             {{ content }}
+            <div id="uyan_frame"></div>
         </div>
 
         <div class="sidenav">
@@ -53,6 +70,9 @@
         </div>
     </div>
 
+    <!-- UY BEGIN -->
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1944533"></script>
+    <!-- UY END -->
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/libs/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="/static/js/post.js"></script>

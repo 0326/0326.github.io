@@ -40,7 +40,7 @@ $(document).ready(function(){
     });
 
     (function(){
-        var ie6 = ($.browser.msie && $.browser.version=="6.0") ? true : false;
+        // = ($.browser.msie && $.browser.version=="6.0") ? true : false;
 
         function initHeading(){
             var h2 = [];
@@ -122,7 +122,7 @@ $(document).ready(function(){
             };
         })();
 
-        if($('.entry h2').length > 2 && !isMobile.any() && !ie6){
+        if($('.entry h2').length > 2 && !isMobile.any()){
 
             genIndex();
 

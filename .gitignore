@@ -1,7 +1,8 @@
-# directories
-.git
-_site/
-
-# file types
-*.psd
-CNAME
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+back_up/
+.deploy*/

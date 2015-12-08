@@ -1,11 +1,13 @@
 title: 校园招聘杂记
 date: 2014-09-14
+updated:
 tags:
 category: blog
-description: 工作大事解决了，终于可以愉快地玩耍了~
+photos: http://img2.imgtn.bdimg.com/it/u=1997407834,1493306500&fm=21&gp=0.jpg
 ---
 
 工作大事解决了，终于可以愉快地玩耍了~
+<!-- more -->
 
 ## 梦想
 

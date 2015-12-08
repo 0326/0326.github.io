@@ -1,7 +1,12 @@
 title: Hello World
-date: 2014-02-24 14:18:17
+date: 2015-04-11
+tags:
+category: blog
+excerpt: hello world
+photos:
 ---
 Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+<!-- more -->
 
 ## Quick Start
 

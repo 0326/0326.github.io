@@ -3,7 +3,7 @@ define([], function(){
 
     //iframe 通信
     window.iframeCall = {
-        setheight: function (el,height) {
+        setHeight: function (el,height) {
             $(el).css({'height':height});
         }
     };

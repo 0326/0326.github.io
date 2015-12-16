@@ -1,5 +1,10 @@
 require([], function (){
 
+	if(location.hostname.indexOf('aliquanfeng.com') > -1){
+		location.href = 'http://aliquanfeng.com/link';
+	}
+
+
 	var isMobileInit = false;
 	var loadMobile = function(){
 		//require(['/js/mobile.js'], function(mobile){

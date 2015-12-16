@@ -53,7 +53,7 @@ define([], function () {
                 (function () {
                     var height = $('.mid-col').height();
                     var width = $('.mid-col').width();
-                    var url = protocol + '//www.aliquanfeng.com/link/';
+                    var url = protocol + '//www.aliquanfeng.com/labs/';
                     var ifmStr = [
                         '<iframe name="link" id="J_IfmLabs" class="ifm-labs" frameborder="0" scrolling="no" src="',
                         url,
@@ -64,7 +64,7 @@ define([], function () {
                         '"></iframe>'
                     ].join('');
 
-                    if (!$('#J_IfmLink').length) {
+                    if (!$('#J_IfmLabs').length) {
                         $('.body-wrap').hide();
                         $('.mid-col').append(ifmStr);
                     }

@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Web前端通信 | 动感小前端</title>
+  <title>Web通信系列-序 | 动感小前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,短">
+  <meta name="description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,HTTP流,SSE,Web Socket,Comet等技术.从整体上对这些技术有所认识,之后会对其中重要的技术点进行深入分析.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Web前端通信">
+<meta property="og:title" content="Web通信系列-序">
 <meta property="og:url" content="http://www.aliquanfeng.com/2014/08/31/20140831-web-communication/index.html">
 <meta property="og:site_name" content="动感小前端">
-<meta property="og:description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,短">
+<meta property="og:description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,HTTP流,SSE,Web Socket,Comet等技术.从整体上对这些技术有所认识,之后会对其中重要的技术点进行深入分析.">
 <meta property="og:image" content="http://7xp4vm.com1.z0.glb.clouddn.com/0__1280×1810_.png-q55">
-<meta property="og:updated_time" content="2015-12-12T19:27:55.000Z">
+<meta property="og:updated_time" content="2015-12-16T14:57:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web前端通信">
-<meta name="twitter:description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,短">
+<meta name="twitter:title" content="Web通信系列-序">
+<meta name="twitter:description" content="本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,HTTP流,SSE,Web Socket,Comet等技术.从整体上对这些技术有所认识,之后会对其中重要的技术点进行深入分析.">
   
     <link rel="alternative" href="/atom.xml" title="动感小前端" type="application/atom+xml">
   
@@ -141,7 +141,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      Web前端通信
+      Web通信系列-序
     </h1>
   
 
@@ -162,11 +162,11 @@
         <div class="article-entry" itemprop="articleBody">
             
             <a href="/2014/08/31/20140831-web-communication/" class="article-headimg">
-                <img src="http://7xp4vm.com1.z0.glb.clouddn.com/0__1280×1810_.png-q55" alt="Web前端通信">
+                <img src="http://7xp4vm.com1.z0.glb.clouddn.com/0__1280×1810_.png-q55" alt="Web通信系列-序">
             </a>
             
             
-            <p>本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,短<br><a id="more"></a></p>
+            <p>本文将介绍Web前端中常见的几种通信方式,包括Ajax,长轮询,HTTP流,SSE,Web Socket,Comet等技术.从整体上对这些技术有所认识,之后会对其中重要的技术点进行深入分析.<br><a id="more"></a></p>
 <h1 id="Web通信之一：Ajax">Web通信之一：Ajax</h1><p>Ajax全称Asynchronous JavaScript +XML，虽然加了个XML，可是Ajax的数据格式并不仅仅只有XML啊…..只能把它归结为历史问题了。</p>
 <h2 id="使用Ajax">使用Ajax</h2><p>Ajax的核心是XMLHttpRequest对象，考虑到兼容性，下面是我们创建XHR对象的一般方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createXHR</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">	<span class="keyword">var</span> xmlHttpRequest;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">window</span>.ActiveXObject)&#123;  </span><br><span class="line">            <span class="keyword">try</span>&#123;  </span><br><span class="line">                xmlHttpRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);  </span><br><span class="line">            &#125;<span class="keyword">catch</span>(e)&#123;  </span><br><span class="line">                xmlHttpRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);  </span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;  </span><br><span class="line">            xmlHttpRequest = <span class="keyword">new</span> XMLHttpRequest();  </span><br><span class="line">        &#125; </span><br><span class="line">    <span class="keyword">return</span> xmlHttpRequest;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用时第一个要调用的方法就是open：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr=createXHR();</span><br><span class="line">xhr.open(<span class="string">"GET"</span>,<span class="string">"http://localhost:8080/test/ajax"</span>,<span class="literal">true</span>);</span><br></pre></td></tr></table></figure></p>
@@ -371,15 +371,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2014/09/14/20140914-recruit-offer/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/09/01/20140901-web-communication-cross-domain/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          校园招聘杂记
+          Web通信系列-跨域
         
       </div>
     </a>
   
+  
+    <a href="/2013/11/04/20141010-css-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS 简明教程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -405,7 +410,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="20140831-web-communication" data-title="Web前端通信" data-url="http://www.aliquanfeng.com/2014/08/31/20140831-web-communication/"></div>
+	<div class="ds-thread" data-thread-key="20140831-web-communication" data-title="Web通信系列-序" data-url="http://www.aliquanfeng.com/2014/08/31/20140831-web-communication/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

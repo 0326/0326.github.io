@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Web通信系列-跨域 | 动感小前端</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="轮询，HTTP流都只能向同源页面发送请求，这主要是Ajax通信的同源限制造成的。所谓同源，就是在同一个域下的资源，所谓同域，就是相同协议，相同host，相同端口号。不符合上面三个条件的请求都是跨域请求。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web通信系列-跨域">
+<meta property="og:url" content="http://www.aliquanfeng.com/2014/09/01/20140901-web-communication-cross-domain/index.html">
+<meta property="og:site_name" content="动感小前端">
+<meta property="og:description" content="轮询，HTTP流都只能向同源页面发送请求，这主要是Ajax通信的同源限制造成的。所谓同源，就是在同一个域下的资源，所谓同域，就是相同协议，相同host，相同端口号。不符合上面三个条件的请求都是跨域请求。">
+<meta property="og:image" content="http://7xp4vm.com1.z0.glb.clouddn.com/0__1280×1810_.png-q55">
+<meta property="og:updated_time" content="2015-12-16T15:00:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web通信系列-跨域">
+<meta name="twitter:description" content="轮询，HTTP流都只能向同源页面发送请求，这主要是Ajax通信的同源限制造成的。所谓同源，就是在同一个域下的资源，所谓同域，就是相同协议，相同host，相同端口号。不符合上面三个条件的请求都是跨域请求。">
+  
+    <link rel="alternative" href="/atom.xml" title="动感小前端" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://tp2.sinaimg.cn/2625394005/180/40062973916/1" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mr.0326</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul class="J_MenuList">
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+							<li><a href="/?#link">收藏夹</a></li>
+				        
+							<li><a href="/?#labs">实验室</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/0326" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/liquanfeng326" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<h1 class="header-author js-mobile-header hide">Mr.0326</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://tp2.sinaimg.cn/2625394005/180/40062973916/1" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mr.0326</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul class="J_MenuList">
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+					<li><a href="/?#link">收藏夹</a></li>
+		        
+					<li><a href="/?#labs">实验室</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/0326" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/liquanfeng326" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-20140901-web-communication-cross-domain"
+         class="article article-type-post article-index-false" itemscope
+         itemprop="blogPost">
+    
+    <div class="article-meta">
+        <a href="/2014/09/01/20140901-web-communication-cross-domain/" class="article-date">
+  	<time datetime="2014-08-31T16:00:00.000Z" itemprop="datePublished">2014-09-01</time>
+</a>
+    </div>
+    
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Web通信系列-跨域
+    </h1>
+  
+
+        </header>
+        
+        <div class="article-info article-info-post">
+            
+            
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <a href="/2014/09/01/20140901-web-communication-cross-domain/" class="article-headimg">
+                <img src="http://7xp4vm.com1.z0.glb.clouddn.com/0__1280×1810_.png-q55" alt="Web通信系列-跨域">
+            </a>
+            
+            
+            <p>轮询，HTTP流都只能向同源页面发送请求，这主要是Ajax通信的同源限制造成的。所谓同源，就是在同一个域下的资源，所谓同域，就是相同协议，相同host，相同端口号。不符合上面三个条件的请求都是跨域请求。<br><a id="more"></a></p>
+<h2 id="跨域常见方法">跨域常见方法</h2><h3 id="Access_Control">Access Control</h3><p>CORS（Cross-Origin Resource Sharing，跨源资源共享）定义了跨源情况下浏览器与服务器该如何沟通。CORS的基本思想就是使用自定义的HTTP头部来让浏览器和服务器沟通，从而决定请求是否有效。</p>
+<p>比如客户端会附加一个origin头部：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Origin: http:<span class="comment">//www.feread.xyz</span></span><br></pre></td></tr></table></figure></p>
+<p>如果服务端认为这个请求可以接受，就在Access-Control-Allow-Origin头部中回发相同源信息（如果是公共资源，可以回发”*”）：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http:<span class="comment">//www.feread.xyz</span></span><br></pre></td></tr></table></figure></p>
+<p>浏览器收到响应后会检查这个头部信息，如果没有这个头部或者源信息不匹配，浏览器就会驳回请求。</p>
+<p>不同浏览器对CORS的实现不同。在IE8+中通过XDR（XDomainRequest）对象来实现。XDR不同于XHR：</p>
+<ol>
+<li>cookie不会随请求发送，也不会随响应返回</li>
+<li>只能设置请求头部信息的Content-Type字段</li>
+<li>不能访问响应的头部信息</li>
+<li>只支持GET和POST请求</li>
+</ol>
+<p>所有的XDR请求都是异步的。请求返回后会触发onload事件，使用方法与XHR大体相同。但是XDR的open方法只接受两个参数：请求类型和绝对url。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xdr=<span class="keyword">new</span> XDomainRequest();</span><br><span class="line"><span class="comment">//返回成功</span></span><br><span class="line">xdr.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> alert(xdr.responseText);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//返回错误</span></span><br><span class="line">xdr.onerror=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> alert(<span class="string">"An error occurred"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置超时响应</span></span><br><span class="line">xdr.timeout=<span class="number">1000</span>;</span><br><span class="line">xdr.ontimeout=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">"timeout..."</span>);</span><br><span class="line">&#125;</span><br><span class="line">xdr.open(<span class="string">"post"</span>,<span class="string">"http://www.feread.xyz/form"</span>);</span><br><span class="line">xdr.contentType=<span class="string">"application/x-www-form-urlencoded"</span>;</span><br><span class="line">xdr.send(<span class="string">"name1=Bill&amp;name2=Gate"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>其他浏览器（Firefox3.5+，Safari4+，Chrome，iOS版Safari，Android的WebKit…）都通过XHR对象实现了对CORS的原生支持。既然都是通过XHR实现的，那么跨域和不跨域时使用上有什么区别呢？</p>
+<p>首先，open()的传入的url必须是绝对地址。出于安全考虑，跨域XHR还有以下限制：</p>
+<ol>
+<li>不能使用setRequestHeader()设置自定义头部</li>
+<li>不能发送和接收cookie</li>
+<li>调用getAllResponseHeaders()总会返回空字符串</li>
+<li>由于都是使用相同接口，为了区别，建议在不跨域时使用相对url，跨域时使用绝对url。</li>
+</ol>
+<p>原则上CORS不支持自定义头部，只能发送get和post请求，但是你也可以通过一种叫做Preflight Requests的透明服务器验证机制来突破它，有兴趣自行谷歌。</p>
+<p>由于IE和其他浏览器对CORS的实现不统一，为了兼容，我们需要实现一个统一的方案：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method,url</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    <span class="keyword">if</span>(<span class="string">"withCredentials"</span> <span class="keyword">in</span> xhr)&#123;</span><br><span class="line">        xhr.open(method,url,<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> XDomainRequest !=<span class="string">"undefined"</span>)&#123;</span><br><span class="line">        xhr=<span class="keyword">new</span> XDomainRequest();</span><br><span class="line">        xhr.open(method,url);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        xhr=<span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> xhr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="图像Ping">图像Ping</h2><p>使用<img>标签，一个网页可以从任何一个网页中加载图片，不必考虑是否跨域。阅读前端博客中的许多图片都是跨域请求的。</p>
+<p>图像Ping是与服务器进行简单、单向的跨域通信的一种方式，其实就是利用了image的src属性。我们平时动态创建图像的时候，image的src属性都是直接指向服务器的静态资源，但如果src不是指向静态资源呢？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img=<span class="keyword">new</span> Image();</span><br><span class="line">img.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//do something...</span></span><br><span class="line">&#125;</span><br><span class="line">img.onerror=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//do something...</span></span><br><span class="line">&#125;</span><br><span class="line">img.src=<span class="string">"http://www.feread.xyz/test?q=nick"</span>;</span><br></pre></td></tr></table></figure>
+<p>当为img设置完src属性后就开始请求了，可以看到这里的src带了一个参数。当请求完成时就可以执行onload事件处理函数了。通过图像Ping，浏览器是得不到任何具体数据的。但是通过侦听onload和onerror事件，我们能知道响应是在什么时候接收到的。</p>
+<p>所以图像Ping跨域的方法也是有明显不足的：一是只能发送get请求，二是无法访问服务器响应文本。因此，图像Ping只能用于浏览器与服务器的单向通信。一般用于跟踪用户点击页面或者动态广告的曝光次数。</p>
+<h2 id="JSONP">JSONP</h2><p>大名鼎鼎的JSONP（JSON with padding，参数式JSON或填充式JSON）是目前非常流行的一种跨域方法。</p>
+<p>JSONP由两部分组成：回调函数和数据。举个例子，假如readit.sinaapp.com页面下有一段JS代码想要跨域访问www.feread.xyz域下的资源，利用JSONP的话应该会发送这样一段请求：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.feread.xyz/jsonp/?callback=handlefunc</span></span><br></pre></td></tr></table></figure></p>
+<p>handlefunc就是回调函数，而数据就是从www.feread.xyz服务器上返回的数据，并且会作为参数传给handlefunc函数，这也就是它为何叫参数式JSON的原因。另外callback=handlefunc类似于键值形式，这个要和服务器约定好，在有的地方也看到类似于<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.feread.xyz/jsonp/?jsonp=handlefunc</span></span><br></pre></td></tr></table></figure></p>
+<p>这样的jsonp请求，不管键时callback还是jsonp，与服务器端统一就行，命名什么的并没有严格规定。</p>
+<p>/<em>这是注释，你看不到</em>/</p>
+<p>不过我还是不解为何叫JSONP？服务端返回的数据不一定是json格式的，可以是任意JavaScript代码，并且是由JS直译器直接执行，而非用json解析器解析。我想很多初学者认识JSONP时都会联想到和JSON的关系，如果硬要说的话，可能就是大家一般传的数据都是json格式的吧…</p>
+<p>说完了原理，下面说说实现。原生JS使用JSONP是通过动态script元素来使用的。使用时可以为src属性指定一个跨域url（类似于img的url），因为JSONP是有效的JS代码，所以请求完成后就会立即执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handlefunc</span>(<span class="params">response</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> script=<span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span><br><span class="line">script.src=<span class="string">"http://www.feread.xyz/jsonp/?callback=handlefunc"</span>;</span><br><span class="line"><span class="built_in">document</span>.body.insertBefore(script,<span class="built_in">document</span>.body.firstChild);</span><br></pre></td></tr></table></figure>
+<p>上面这段代码动态的创建了script标签，也因为这样，JSONP 被称作是一种“让使用者利用 script 元素注入的方式绕开同源策略”的方法。如果不想这样，也可以直接用jQuery：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">'http://www.feread.xyz/jsonp'</span>,</span><br><span class="line">    dataType: <span class="string">"jsonp"</span>,</span><br><span class="line">    jsonp: <span class="string">"callback"</span>,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>JSONP是从其他域加载代码执行的，所以访问的那个域一定要值得你的信任，这样就不会有问题。推荐用jQuery提供的JSONP方法，因为这样不仅简单，还有错误处理。</p>
+<h2 id="window-name">window.name</h2><p>当一个页面中有多个框架（iframe或者frame）时，浏览器会为整个HTML文档创建一个window对象，还会为每个框架创建一个额外的window对象。而window.name就是每个框架的名字。window.name  值在不同的页面（甚至不同域名）加载后依旧存在，浏览器刷新后还存在，并且可以支持非常长的 name 值（2MB）。利用这一点可以实现基于window.name跨域的。</p>
+<p>实现方法需要涉及到三个页面</p>
+<ol>
+<li><p>本服务器需要获取数据的页面，假设为www.a.com/app.html</p>
+</li>
+<li><p>本服务器代理页面,假设为www.a.com/proxy.html</p>
+</li>
+<li><p>需要访问的外域页面，假设为www.out.com/data.html</p>
+</li>
+</ol>
+<p>首先外域服务器要在data.html下面设置它的window.name的值，以便于我们访问：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//data.html</span></span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="built_in">window</span>.name = <span class="string">'this is data'</span>;<span class="comment">// 这里是要传输的数据，大小一般为2M，IE和firefox下可以大至32M左右。数据格式可以自定义，如json、字符串</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后在我们的app.html页面下面创建一个iframe，让src指向外域的data.html页面。当页面加载完成后，我们还不能访问data.html下的window.name，因为name属性只有在同域下才能访问，所以我们需要将这个远程的iframe.src指向本域下的proxy.html，这样才能访问数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> state = <span class="number">0</span>, </span><br><span class="line">    iframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>),</span><br><span class="line">    loadfn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (state === <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> data = iframe.contentWindow.name;    <span class="comment">// 读取数据</span></span><br><span class="line">            alert(data);    <span class="comment">//弹出获取的数据</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (state === <span class="number">0</span>) &#123;</span><br><span class="line">            state = <span class="number">1</span>;</span><br><span class="line">            iframe.contentWindow.location = <span class="string">"http://a.com/proxy.html"</span>;    <span class="comment">// 设置的代理文件</span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;;</span><br><span class="line">    iframe.src = <span class="string">'http://www.out.com/data.html'</span>;</span><br><span class="line">    <span class="keyword">if</span> (iframe.attachEvent) &#123;</span><br><span class="line">        iframe.attachEvent(<span class="string">'onload'</span>, loadfn);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        iframe.onload  = loadfn;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>当远程data.html页面加载完后会执行一次loadfn函数，state变为1，然后将iframe的地址指向本地代理文件proxy.html，当本地文件加载好之后又会执行一次loadfn，此时window.name仍然没有改变，并且iframe与app.html同域，name的值可以直接获取。</p>
+<p>获取数据之后为了防止其他iframe访问，销毁iframe，这样也可以节省内存：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当远程data.html页面加载完后会执行一次loadfn函数，state变为<span class="number">1</span>，然后将iframe的地址指向本地代理文件proxy.html，当本地文件加载好之后又会执行一次loadfn，此时<span class="built_in">window</span>.name仍然没有改变，并且iframe与app.html同域，name的值可以直接获取。</span><br><span class="line"></span><br><span class="line">获取数据之后为了防止其他iframe访问，销毁iframe，这样也可以节省内存：</span><br></pre></td></tr></table></figure></p>
+<p>整个过程中，proxy.html啥也没干，就占了个坑。总结起来：iframe的src属性由外域转向本地域，跨域数据即由iframe的window.name从外域传递到本地域。这个就巧妙地绕过了浏览器的跨域访问限制，但同时它又是安全操作。</p>
+<h2 id="window-postMessage">window.postMessage</h2><p>postMessage是html5引入的一个新的API，目前支持这个API的浏览器有：Firefox, IE8+, Opera, Safari, Chrome。postMessage允许页面中的多个iframe/window的通信，postMessage也可以实现ajax直接跨域，不通过服务器端代理。</p>
+<p>详细内容参考这里就行了：<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http:<span class="comment">//www.feread.xyz</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="总结">总结</h2><p>跨域方法很多，除了上面几种，还可以用服务器代理跨域（server proxy），利用flash跨域,基于FIM,利用document.domain（只能在相同主域不同二级域名下跨域）限于篇幅，不一一叙述。</p>
+<h2 id="Fetch">Fetch</h2><h2 id="xdr">xdr</h2>
+            
+        </div>
+        
+    </div>
+    
+    
+<nav id="article-nav">
+  
+    <a href="/2014/09/02/20140901-web-communication-jsonp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Web通信系列-深入JSONP
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/31/20140831-web-communication/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Web通信系列-序</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+    
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="20140901-web-communication-cross-domain" data-title="Web通信系列-跨域" data-url="http://www.aliquanfeng.com/2014/09/01/20140901-web-communication-cross-domain/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 动感小前端
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>  Theme
+			<a href="https://github.com/0326" target="_blank">Illyasviel</a> from
+			<a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="right-col">
+      <div class="right-col-content">
+
+</div>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,11 +1,25 @@
 require([], function (){
 
+<<<<<<< HEAD
 	var isMobileInit = false;
 	var loadMobile = function(){
 		require(['/js/mobile.js'], function(mobile){
 			mobile.init();
 			isMobileInit = true;
 		});
+=======
+	if(location.hostname.indexOf('aliquanfeng.com') > -1){
+		location.href = 'http://aliquanfeng.com/link';
+	}
+
+
+	var isMobileInit = false;
+	var loadMobile = function(){
+		//require(['/js/mobile.js'], function(mobile){
+		//	mobile.init();
+			isMobileInit = true;
+		//});
+>>>>>>> 5deeb159d7f474a91ebacd373d06e040a5290b98
 	}
 	var isPCInit = false;
 	var loadPC = function(){
@@ -15,6 +29,10 @@ require([], function (){
 		});
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5deeb159d7f474a91ebacd373d06e040a5290b98
 	var browser={
 	    versions:function(){
 	    var u = window.navigator.userAgent;
@@ -90,5 +108,13 @@ require([], function (){
 	if(yiliaConfig.open_in_new == true){
 		$(".article a[href]").attr("target", "_blank")
 	}
+<<<<<<< HEAD
 	
+=======
+
+	require(['/js/common.js'], function (common) {
+		common.init();
+	});
+
+>>>>>>> 5deeb159d7f474a91ebacd373d06e040a5290b98
 });

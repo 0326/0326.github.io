@@ -2,7 +2,7 @@ title: 创业红海
 date: 2015-02-24
 tags:
 category: blog
-photos:
+photos: http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/12/Untitled-design-11.jpg
 ---
 
 1年前投入了创业的海洋，现在终于出海了。大学生到底适不适合创业，其实就是天时地利人和。

@@ -1,11 +1,12 @@
 title: Hello World
-date: 2015-04-11
+date: 3326-03-26
 tags:
 category: blog
 excerpt: hello world
-photos:
+photos: http://7xp4vm.com1.z0.glb.clouddn.com/IMG_20150623_174858.jpg-q55
 ---
-Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+本站正在建设中(in construction)...
 <!-- more -->
 
 ## Quick Start

@@ -3,7 +3,7 @@ date: 2014-09-14
 updated:
 tags:
 category: blog
-photos: http://img2.imgtn.bdimg.com/it/u=1997407834,1493306500&fm=21&gp=0.jpg
+photos: https://gtms02.alicdn.com/tps/i2/TB1HQHCHXXXXXcoaXXXf5Y.HXXX-990-521.png
 ---
 
 工作大事解决了，终于可以愉快地玩耍了~

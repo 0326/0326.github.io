@@ -1,0 +1,22 @@
+html,body,ul,li,h1,h2,h3,h4,section,p{
+	margin: 0;
+	padding: 0;
+}
+
+.hide {
+	display: none;
+}
+.float-l{
+	float: left;
+}
+.float-r{
+	float: right;
+}
+.clearfix{
+	&:after{
+		content: ' ';
+		display: block;
+		clear: both;
+		overflow: hidden;
+	}
+}

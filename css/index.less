@@ -1,0 +1,64 @@
+@import './base.less';
+@import './animate.less';
+
+
+body{
+	color: #FFF;
+	background: url("http://s.cn.bing.net/az/hprichbg/rb/KansasCropCircles_ZH-CN9416992875_1920x1080.jpg") no-repeat;
+	background-size: cover;
+}
+
+body.loading{
+	// background: #000;
+}
+
+.content{
+	width: 800px;
+	padding: 10px;
+	text-align: center;
+	background: rgba(0, 0, 0, .5);
+	margin: 10% auto 0 auto;
+}
+.intro-title{
+	font-size: 50px;
+	line-height: 150px;
+}
+
+.profile-box{
+	position: relative;
+	.avatar-head{
+		display: inline-block;
+	}
+	.avatar-img{
+		.float-l;
+		width:50px;
+		height: 50px;
+		vertical-align: bottom;
+		border-radius: 50%;
+	}
+	.avatar-name{
+		display: inline-block;
+		font-size: 48px;
+		line-height: 50px;
+	}
+	.avatar-desc{
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
+.link-box{
+	margin-top: 60px;
+	text-align: center;
+	a {
+		color: #FFF;
+		text-decoration: none;
+	}
+	ul{
+		font-size: 18px;
+		line-height: 32px;
+		list-style: none;
+	}
+	li{
+		display: inline-block;
+	}
+}

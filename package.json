@@ -1,19 +1,35 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
-  "hexo": {
-    "version": "3.1.1"
+  "name": "0326.github.io",
+  "version": "1.0.0",
+  "description": "动感小前端的网站",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --devtool eval --progress --colors --hot",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "hexo": "^3.1.0",
-    "hexo-generator-archive": "^0.1.2",
-    "hexo-generator-category": "^0.1.2",
-    "hexo-generator-index": "^0.1.2",
-    "hexo-generator-tag": "^0.1.1",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-stylus": "^0.3.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-server": "^0.1.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0326/0326.github.io.git"
+  },
+  "keywords": [
+    "SPA",
+    "fullscreen",
+    "personal",
+    "site"
+  ],
+  "author": "0326",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0326/0326.github.io/issues"
+  },
+  "homepage": "https://github.com/0326/0326.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }

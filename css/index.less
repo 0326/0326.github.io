@@ -1,64 +1,120 @@
 @import './base.less';
 @import './animate.less';
-
-
-body{
+a {
 	color: #FFF;
-	background: url("http://s.cn.bing.net/az/hprichbg/rb/KansasCropCircles_ZH-CN9416992875_1920x1080.jpg") no-repeat;
-	background-size: cover;
+	text-decoration: none;
 }
 
-body.loading{
+li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body.loading {
 	// background: #000;
 }
 
-.content{
-	width: 800px;
-	padding: 10px;
-	text-align: center;
-	background: rgba(0, 0, 0, .5);
-	margin: 10% auto 0 auto;
-}
-.intro-title{
-	font-size: 50px;
-	line-height: 150px;
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	.page-list{
+		padding: 10px 0;
+		text-align: center;
+		li{
+			height: 50px;
+			line-height: 50px;
+		}
+		a{
+			display: block;
+			padding: 0 30px;
+		}
+		.avatar-img{
+			width:50px;
+			height: 50px;
+			border-radius: 25px;
+			vertical-align: middle;
+		}
+	}
 }
 
-.profile-box{
+.bgimg-box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url("http://s.cn.bing.net/az/hprichbg/rb/KansasCropCircles_ZH-CN9416992875_1920x1080.jpg") no-repeat;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		content: ' ';
+		background: rgba(0, 0, 0, .7);
+	}
+}
+
+.content {
 	position: relative;
-	.avatar-head{
-		display: inline-block;
+	content: ' ';
+	width: 600px;
+	padding: 10px;
+	text-align: center;
+	margin: 10% auto 0 auto;
+	color: #FFF;
+	z-index: 1;
+}
+
+.intro-title-cn {
+	font-size: 24px;
+	line-height: 48px;
+}
+
+.profile-box {
+	position: relative;
+	width: 560px;
+	margin: 0 auto;
+	.avatar-name {
+		font-size: 42px;
+		line-height: 64px;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
 	}
-	.avatar-img{
-		.float-l;
-		width:50px;
-		height: 50px;
-		vertical-align: bottom;
-		border-radius: 50%;
-	}
-	.avatar-name{
-		display: inline-block;
-		font-size: 48px;
-		line-height: 50px;
-	}
-	.avatar-desc{
+	.avatar-desc {
 		font-size: 20px;
 		line-height: 32px;
 	}
 }
-.link-box{
-	margin-top: 60px;
-	text-align: center;
-	a {
-		color: #FFF;
-		text-decoration: none;
-	}
-	ul{
-		font-size: 18px;
-		line-height: 32px;
-		list-style: none;
-	}
-	li{
-		display: inline-block;
+
+
+
+// footer
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	width: 100%;
+	.sns-list {
+		margin-top: 60px;
+		text-align: center;
+		.iconfont {
+			display: block;
+			font-size: 32px;
+			&:hover{
+				color: #7ed3bf;
+			}
+		}
 	}
 }

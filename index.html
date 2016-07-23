@@ -15,57 +15,153 @@
     <meta name="twitter:title" content="动感小前端">
     <meta name="twitter:description">
 
-    <link rel="alternative" href="/atom.xml" title="动感小前端" type="application/atom+xml">
-
-    <!--字体-->
-
-
     <link rel="icon" href="/favicon.png">
+    <link rel="alternative" href="/atom.xml" title="动感小前端" type="application/atom+xml">
+    <style>
+        html,
+        body,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        header,
+        footer,
+        section,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Bariol_Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        ::-moz-selection {
+            background: #7ed3bf;
+            color: #fff;
+        }
+        
+        ::selection {
+            background: #7ed3bf;
+            color: #fff;
+        }
+        
+        #header {
+            padding: 48px 0 55px 0;
+            text-align: center;
+            background: #f2f2f2;
+        }
+        
+        #header .title {
+            color: #555;
+            letter-spacing: 9px;
+            text-indent: 9px;
+        }
+        
+        #header .desc {
+            font-size: 15px;
+            color: #9f9f9f;
+            margin: 10px 0 0 0;
+            font-weight: normal;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+        }
+        
+        #intro {
+            padding: 100px 0 60px 0;
+        }
+        
+        #intro .content {
+            margin: 0 auto;
+            padding: 0 10px;
+            max-width: 620px;
+            color: #999;
+            font-size: 17px;
+            line-height: 2;
+            letter-spacing: 1px;
+            text-align: justify;
+            text-indent: 38px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #menu {
+            position: relative;
+        }
+        
+        #menu .avatar-box {
+            position: absolute;
+            box-sizing: border-box;
+            left: 50%;
+            top: -18px;
+            margin-left: -24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            opacity: .7;
+        }
+        
+        #menu .avatar-box:hover {
+            border: 2px solid #7ed3bf;
+        }
+        
+        #menu .avatar-img {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+        
+        #menu .avatar-img:hover {
+            opacity: 1;
+            width: 44px;
+            height: 44px;
+        }
+        
+        #footer .sns-list {
+            margin-top: 60px;
+            text-align: center;
+            list-style: none;
+        }
+        
+        #footer .sns-list li {
+            display: inline-block;
+            padding: 0 5px;
+        }
+        
+        #footer .sns-list a {
+            color: #e2e2e2;
+            text-decoration: none;
+        }
+        
+        #footer .iconfont {
+            display: block;
+            font-size: 32px;
+        }
+        
+        #footer .iconfont:hover {
+            color: #7ed3bf;
+        }
+    </style>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1467475836_0146508.css">
-    <script src="./bundle.js"></script>
 </head>
 
-<body class="loading">
-    <header>
-        <ul class="page-list">
-            <li>
-                <a href="#">博客</a>
-            </li>
-            <li>
-                <a href="#">实验室</a>
-            </li>
-            <li>
-                <a href="#"><img class="avatar-img" src="./img/avatar-panda.jpeg" alt="avatar"></a>
-            </li>
-            <li>
-                <a href="#">关于我</a>
-            </li>
-            <li>
-                <a href="#">留言</a>
-            </li>
-        </ul>
+<body>
+    <header id="header">
+        <h1 class="title">动感小前端</h1>
+        <p class="desc">coder && photographer && peregrinator && false</p>
     </header>
-    <section class="bgimg-box">
-    </section>
-    <section id="j_content" class="content">
-        <div class="profile-box">
-            <div id="j_avatar" class="avatar-head hide">
-                <div class="ani-pacman">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <p class="avatar-name">动感小前端</p>
-            <p class="avatar-desc">Quanfeng Lee's personal website</p>
+    <section id="menu">
+        <div class="avatar-box">
+            <img class="avatar-img" src="/img/avatar-panda.jpeg" alt="0326">
         </div>
-        <h1 class="intro-title-cn">努力成为一名会设计的优秀前端工程师</h1>
-        <h1 class="intro-title-zh">Technology and art meet, rational and emotional integration, which is the front end</h1>
     </section>
-    <footer>
+    <section id="intro">
+        <div class="content">
+            欢迎来到动感首页。我叫李全锋(1993,05,17-2070,03,26)，故居张家界，毕业于关山口男子职业技术学院(HUST)，目前就职于阿里巴巴·杭州。是一名致力于通过Web技术来改变人类生活的地下工作人员，一名努力成为设计师却永远不会成为设计师的前端工程师，一名徘徊在技术和艺术边缘的乖离旅行者。
+        </div>
+    </section>
+    <footer id="footer">
         <ul class="sns-list">
             <li>
                 <a href="https://github.com/0326" class="iconfont icon-github"></a>

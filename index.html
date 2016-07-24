@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>动感小前端</title>
+    <title>动感首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description">
     <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="动感小前端">
     <meta name="twitter:description">
-
+    <base target=_blank>
     <link rel="icon" href="/favicon.png">
     <link rel="alternative" href="/atom.xml" title="动感小前端" type="application/atom+xml">
     <style>
@@ -36,6 +36,19 @@
         
         body {
             font-family: "Bariol_Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .plane-list li {
+            display: inline-block;
+            padding: 0 5px;
+        }
+        
+        .hide {
+            display: none;
         }
         
         ::-moz-selection {
@@ -118,18 +131,40 @@
             height: 44px;
         }
         
+        #nav {
+            margin: 120px auto 102px auto;
+        }
+        
+        #nav .nav-list {
+            text-align: center;
+        }
+        
+        #nav .nav-list li {
+            padding: 20px;
+        }
+        
+        #nav .nav-list li:hover p {
+            visibility: visible;
+        }
+        
+        #nav .nav-list p {
+            padding: 20px;
+            color: #7ed3bf;
+            visibility: hidden;
+        }
+        
+        #nav .iconfont {
+            display: block;
+            font-size: 64px;
+        }
+        
         #footer .sns-list {
             margin-top: 60px;
             text-align: center;
-            list-style: none;
         }
         
-        #footer .sns-list li {
-            display: inline-block;
-            padding: 0 5px;
-        }
-        
-        #footer .sns-list a {
+        #footer .sns-list a,
+        #nav .nav-list a {
             color: #e2e2e2;
             text-decoration: none;
         }
@@ -139,11 +174,12 @@
             font-size: 32px;
         }
         
-        #footer .iconfont:hover {
+        #footer .iconfont:hover,
+        #nav .iconfont:hover {
             color: #7ed3bf;
         }
     </style>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1467475836_0146508.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1469353428_0707362.css">
 </head>
 
 <body>
@@ -152,17 +188,41 @@
         <p class="desc">coder && photographer && peregrinator && false</p>
     </header>
     <section id="menu">
-        <div class="avatar-box">
+        <div id="avatar" class="avatar-box">
             <img class="avatar-img" src="//7xp4vm.com1.z0.glb.clouddn.com/avatar-panda.jpg" alt="0326">
         </div>
     </section>
     <section id="intro">
         <div class="content">
-            欢迎来到动感首页。我叫李全锋(1993,05,17-2070,03,26)，故居张家界，毕业于关山口男子职业技术学院(HUST)，目前就职于阿里巴巴·杭州。是一名致力于通过Web技术来改变人类生活的地下工作人员，一名努力成为设计师却永远不会成为设计师的前端工程师，一名徘徊在技术和艺术边缘的乖离旅行者。
+            欢迎来到动感首页。李全锋(1993,05,17-2070,03,26)，故居张家界，毕业于关山口男子职业技术学院(HUST)，目前就职于阿里巴巴·杭州。是一名致力于通过Web技术来改变人类生活的地下工作人员，一名努力成为设计师却永远不会成为设计师的前端工程师，一名徘徊在技术和艺术边缘的乖离旅行者。
         </div>
     </section>
+    <section id="nav" class="hide">
+        <ul class="nav-list  plane-list">
+            <li>
+                <a href="http://www.jianshu.com/users/0ae2e56c3dfa/latest_articles" class="iconfont icon-blog"></a>
+                <p>博客</p>
+            </li>
+            <li>
+                <a href="https://github.com/0326?tab=repositories" class="iconfont icon-project"></a>
+                <p>项目</p>
+            </li>
+            <li>
+                <a href="http://aliquanfeng.com/photograph/" class="iconfont icon-photo"></a>
+                <p>影像</p>
+            </li>
+            <li>
+                <a href="http://aliquanfeng.com/labs/" class="iconfont icon-lab"></a>
+                <p>实验室</p>
+            </li>
+            <li>
+                <a href="http://aliquanfeng.com/" class="iconfont icon-profile"></a>
+                <p>关于</p>
+            </li>
+        </ul>
+    </section>
     <footer id="footer">
-        <ul class="sns-list">
+        <ul class="sns-list plane-list">
             <li>
                 <a href="https://github.com/0326" class="iconfont icon-github"></a>
             </li>
@@ -190,6 +250,21 @@
 
         </ul>
     </footer>
+    <script>
+        var $avatarBtn = document.getElementById('avatar');
+        var $intro = document.getElementById('intro');
+        var $nav = document.getElementById('nav');
+
+        $avatarBtn.addEventListener('click', function(e) {
+            if (~$nav.className.indexOf('hide')) {
+                $nav.className = $nav.className.replace('hide', '');
+                $intro.className += 'hide';
+            } else {
+                $intro.className = $intro.className.replace('hide', '');
+                $nav.className += 'hide';
+            }
+        });
+    </script>
 </body>
 
 </html>

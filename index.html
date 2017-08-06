@@ -293,27 +293,19 @@
         </ul>
     </footer>
     <script>
-        var $avatarBtn = document.getElementById('avatar');
-        var $intro = document.getElementById('intro');
-        var $nav = document.getElementById('nav');
+        var $avatarBtn = document.getElementById('avatar')
+        var $intro = document.getElementById('intro')
+        var $nav = document.getElementById('nav')
 
         $avatarBtn.addEventListener('click', function(e) {
             if (~$nav.className.indexOf('hide')) {
-                $nav.className = $nav.className.replace('hide', '');
-                $intro.className += 'hide';
+                $nav.className = $nav.className.replace('hide', '')
+                $intro.className += 'hide'
             } else {
-                $intro.className = $intro.className.replace('hide', '');
-                $nav.className += 'hide';
+                $intro.className = $intro.className.replace('hide', '')
+                $nav.className += 'hide'
             }
-        });
-
-
-
-
-        function a() {}
-        var a = 1;
-
-        console.log(a)
+        })
     </script>
 </body>
 
